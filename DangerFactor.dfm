@@ -3,18 +3,16 @@
   Top = 0
   BorderStyle = bsDialog
   Caption = #1042#1088#1077#1076#1085#1099#1081' '#1092#1072#1082#1090#1086#1088
-  ClientHeight = 514
-  ClientWidth = 785
+  ClientHeight = 505
+  ClientWidth = 779
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label2: TLabel
     Left = 152
@@ -108,8 +106,8 @@
   object cxPageControl1: TcxPageControl
     AlignWithMargins = True
     Left = 3
-    Top = 155
-    Width = 779
+    Top = 146
+    Width = 773
     Height = 315
     Align = alBottom
     Font.Charset = DEFAULT_CHARSET
@@ -123,12 +121,17 @@
     Properties.CustomButtons.Buttons = <>
     Properties.Style = 9
     Properties.TabHeight = 30
+    ExplicitTop = 155
+    ExplicitWidth = 779
     ClientRectBottom = 315
-    ClientRectRight = 779
+    ClientRectRight = 773
     ClientRectTop = 31
     object cxTabSheet1: TcxTabSheet
       Caption = #1042#1088#1072#1095#1080
       ImageIndex = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxGrid1: TcxGrid
         AlignWithMargins = True
         Left = 3
@@ -145,6 +148,7 @@
         TabOrder = 0
         object cxGrid1DBTableView1: TcxGridDBTableView
           Navigator.Buttons.CustomButtons = <>
+          ScrollbarAnnotations.CustomAnnotations = <>
           DataController.DataSource = DModule.dsFactorDoctor
           DataController.Summary.DefaultGroupSummaryItems = <>
           DataController.Summary.FooterSummaryItems = <>
@@ -202,6 +206,9 @@
     object cxTabSheet2: TcxTabSheet
       Caption = #1051#1072#1073#1086#1088#1072#1090#1086#1088#1085#1099#1077' '#1080#1089#1089#1083#1077#1076#1086#1074#1072#1085#1080#1103
       ImageIndex = 1
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxLookupComboBox4: TcxLookupComboBox
         AlignWithMargins = True
         Left = 113
@@ -253,6 +260,7 @@
         TabOrder = 2
         object cxGridDBTableView1: TcxGridDBTableView
           Navigator.Buttons.CustomButtons = <>
+          ScrollbarAnnotations.CustomAnnotations = <>
           DataController.DataSource = DModule.dsFactorResearch
           DataController.Summary.DefaultGroupSummaryItems = <>
           DataController.Summary.FooterSummaryItems = <>
@@ -263,6 +271,7 @@
           OptionsView.Header = False
           object cxGridDBTableView1description: TcxGridDBColumn
             DataBinding.FieldName = 'description'
+            DataBinding.IsNullValueType = True
           end
         end
         object cxGridLevel1: TcxGridLevel
@@ -273,6 +282,9 @@
     object cxTabSheet3: TcxTabSheet
       Caption = #1055#1088#1086#1090#1080#1074#1086#1087#1086#1082#1072#1079#1072#1085#1080#1103
       ImageIndex = 2
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxLookupComboBox5: TcxLookupComboBox
         AlignWithMargins = True
         Left = 113
@@ -322,6 +334,7 @@
         TabOrder = 2
         object cxGridDBTableView2: TcxGridDBTableView
           Navigator.Buttons.CustomButtons = <>
+          ScrollbarAnnotations.CustomAnnotations = <>
           DataController.DataSource = DModule.dsFactorContraind
           DataController.Summary.DefaultGroupSummaryItems = <>
           DataController.Summary.FooterSummaryItems = <>
@@ -342,6 +355,9 @@
     object cxTabSheet4: TcxTabSheet
       Caption = #1043#1088#1091#1087#1087#1099' '#1074#1077#1097#1077#1089#1090#1074
       ImageIndex = 3
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object cxLookupComboBox6: TcxLookupComboBox
         AlignWithMargins = True
         Left = 113
@@ -391,6 +407,7 @@
         TabOrder = 2
         object cxGridDBTableView3: TcxGridDBTableView
           Navigator.Buttons.CustomButtons = <>
+          ScrollbarAnnotations.CustomAnnotations = <>
           DataController.DataSource = DModule.dsFactorGroupSubstance
           DataController.Summary.DefaultGroupSummaryItems = <>
           DataController.Summary.FooterSummaryItems = <>
@@ -401,6 +418,7 @@
           OptionsView.Header = False
           object cxGridDBTableView3NameSubstances: TcxGridDBColumn
             DataBinding.FieldName = 'NameSubstances'
+            DataBinding.IsNullValueType = True
           end
         end
         object cxGridLevel3: TcxGridLevel
@@ -411,11 +429,13 @@
   end
   object Panel1: TPanel
     Left = 0
-    Top = 473
-    Width = 785
+    Top = 464
+    Width = 779
     Height = 41
     Align = alBottom
     TabOrder = 4
+    ExplicitTop = 473
+    ExplicitWidth = 785
     object btnClose: TBitBtn
       AlignWithMargins = True
       Left = 706

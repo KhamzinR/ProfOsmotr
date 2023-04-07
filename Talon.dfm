@@ -3,25 +3,23 @@ object TalonProfOsmotr: TTalonProfOsmotr
   Top = 0
   BorderStyle = bsDialog
   Caption = #1053#1072#1087#1088#1072#1074#1083#1077#1085#1080#1077' '#1085#1072' '#1087#1088#1086#1093#1086#1078#1076#1077#1085#1080#1077' '#1087#1088#1086#1092#1086#1089#1084#1086#1090#1088#1072
-  ClientHeight = 491
-  ClientWidth = 1126
+  ClientHeight = 482
+  ClientWidth = 1120
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object GroupBox1: TGroupBox
     AlignWithMargins = True
     Left = 474
     Top = 52
-    Width = 649
-    Height = 386
+    Width = 643
+    Height = 377
     Align = alClient
     Caption = #1060#1072#1082#1090#1086#1088#1099' '#1074#1088#1077#1076#1085#1086#1089#1090#1080': '
     Font.Charset = DEFAULT_CHARSET
@@ -31,6 +29,8 @@ object TalonProfOsmotr: TTalonProfOsmotr
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    ExplicitWidth = 649
+    ExplicitHeight = 386
     object cxGrid1: TcxGrid
       Left = 2
       Top = 56
@@ -42,6 +42,7 @@ object TalonProfOsmotr: TTalonProfOsmotr
       ExplicitTop = 55
       object cxGrid1DBTableView1: TcxGridDBTableView
         Navigator.Buttons.CustomButtons = <>
+        ScrollbarAnnotations.CustomAnnotations = <>
         DataController.DataSource = DModule.dsMemDataFactor
         DataController.Summary.DefaultGroupSummaryItems = <>
         DataController.Summary.FooterSummaryItems = <>
@@ -159,7 +160,7 @@ object TalonProfOsmotr: TTalonProfOsmotr
     Left = 3
     Top = 52
     Width = 465
-    Height = 386
+    Height = 377
     Align = alLeft
     Caption = #1044#1072#1085#1085#1099#1077' '#1087#1088#1086#1092#1086#1089#1084#1086#1090#1088#1072': '
     Font.Charset = DEFAULT_CHARSET
@@ -169,6 +170,7 @@ object TalonProfOsmotr: TTalonProfOsmotr
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
+    ExplicitHeight = 386
     object Label1: TLabel
       Left = 31
       Top = 28
@@ -397,11 +399,13 @@ object TalonProfOsmotr: TTalonProfOsmotr
   end
   object Panel1: TPanel
     Left = 0
-    Top = 441
-    Width = 1126
+    Top = 432
+    Width = 1120
     Height = 50
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 441
+    ExplicitWidth = 1126
     object Button2: TButton
       AlignWithMargins = True
       Left = 1008
@@ -454,17 +458,18 @@ object TalonProfOsmotr: TTalonProfOsmotr
   object Panel4: TPanel
     Left = 0
     Top = 0
-    Width = 1126
+    Width = 1120
     Height = 49
     Align = alTop
     BorderStyle = bsSingle
     TabOrder = 3
+    ExplicitWidth = 1126
     object lbFIOandAGE: TLabel
       AlignWithMargins = True
       Left = 4
       Top = 4
       Width = 408
-      Height = 37
+      Height = 23
       Align = alLeft
       Alignment = taCenter
       Caption = #1052#1080#1088#1086#1085#1086#1074#1072' '#1057#1074#1077#1090#1083#1072#1085#1072' '#1050#1072#1081#1076#1072#1088#1086#1074#1085#1072', 63 '#1075#1086#1076#1072
@@ -475,13 +480,12 @@ object TalonProfOsmotr: TTalonProfOsmotr
       Font.Style = [fsBold]
       ParentFont = False
       Layout = tlCenter
-      ExplicitHeight = 23
     end
     object lbFactor: TLabel
       Left = 415
       Top = 1
-      Width = 706
-      Height = 43
+      Width = 500
+      Height = 19
       Align = alClient
       Alignment = taCenter
       Caption = 
@@ -494,9 +498,6 @@ object TalonProfOsmotr: TTalonProfOsmotr
       Font.Style = [fsBold]
       ParentFont = False
       Layout = tlCenter
-      ExplicitLeft = 580
-      ExplicitWidth = 500
-      ExplicitHeight = 19
     end
   end
 end

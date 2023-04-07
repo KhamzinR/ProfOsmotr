@@ -7,8 +7,8 @@ object Frame4: TFrame4
   object Label1: TLabel
     Left = 40
     Top = 24
-    Width = 31
-    Height = 13
+    Width = 34
+    Height = 15
     Caption = 'Label1'
   end
   object Memo1: TMemo

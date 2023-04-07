@@ -2,22 +2,20 @@ object Form5: TForm5
   Left = 0
   Top = 0
   Caption = 'Form5'
-  ClientHeight = 645
-  ClientWidth = 1139
+  ClientHeight = 636
+  ClientWidth = 1133
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 96
   TextHeight = 13
   object GroupBox1: TGroupBox
     AlignWithMargins = True
     Left = 3
     Top = 3
-    Width = 1133
+    Width = 1127
     Height = 198
     Align = alTop
     Caption = #1044#1072#1085#1085#1099#1077' '#1089#1087#1080#1089#1082#1072
@@ -30,6 +28,7 @@ object Form5: TForm5
     TabOrder = 0
     ExplicitLeft = 170
     ExplicitTop = 35
+    ExplicitWidth = 1133
     object Label1: TLabel
       Left = 24
       Top = 32
@@ -130,8 +129,8 @@ object Form5: TForm5
     AlignWithMargins = True
     Left = 3
     Top = 207
-    Width = 1133
-    Height = 388
+    Width = 1127
+    Height = 379
     Align = alClient
     Caption = #1058#1080#1087' '#1087#1088#1086#1092#1086#1089#1084#1086#1090#1088#1072
     Font.Charset = DEFAULT_CHARSET
@@ -142,6 +141,7 @@ object Form5: TForm5
     ParentFont = False
     TabOrder = 1
     ExplicitLeft = -2
+    ExplicitWidth = 1133
     ExplicitHeight = 370
     object Label4: TLabel
       Left = 446
@@ -278,12 +278,14 @@ object Form5: TForm5
     object GroupBox3: TGroupBox
       AlignWithMargins = True
       Left = 5
-      Top = 144
-      Width = 1123
+      Top = 135
+      Width = 1117
       Height = 239
       Align = alBottom
       Caption = #1055#1077#1088#1077#1095#1077#1085#1100' '#1086#1073#1089#1083#1077#1076#1086#1074#1072#1085#1080#1081
       TabOrder = 6
+      ExplicitTop = 144
+      ExplicitWidth = 1123
       object cxGrid1: TcxGrid
         AlignWithMargins = True
         Left = 5
@@ -301,8 +303,8 @@ object Form5: TForm5
   object Panel1: TPanel
     AlignWithMargins = True
     Left = 3
-    Top = 601
-    Width = 1133
+    Top = 592
+    Width = 1127
     Height = 41
     Align = alBottom
     TabOrder = 2

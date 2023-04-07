@@ -3,7 +3,8 @@ unit SettingÑonformity;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxControls, cxLookAndFeels,
   cxLookAndFeelPainters, cxStyles, dxSkinsCore, dxSkinBlack, dxSkinBlue,
   dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkroom, dxSkinDarkSide,
@@ -25,7 +26,9 @@ uses
   cxDataControllerConditionalFormattingRulesManagerDialog, Data.DB, cxDBData,
   cxGridCustomTableView, cxGridTableView, cxGridDBTableView, dxmdaset,
   Vcl.StdCtrls, cxGridLevel, cxClasses, cxGridCustomView, cxGrid, Vcl.ExtCtrls,
-  cxTextEdit, cxDBLookupComboBox;
+  cxTextEdit, cxDBLookupComboBox, dxSkinBasic, dxSkiniMaginary,
+  dxSkinOffice2019Black, dxSkinOffice2019Colorful, dxSkinOffice2019DarkGray,
+  dxSkinOffice2019White, dxScrollbarAnnotations;
 
 type
   TfrmSettingÑonformity = class(TForm)
@@ -85,18 +88,19 @@ uses DM, MainForm;
 
 procedure TfrmSettingÑonformity.btnAddSprProffesionClick(Sender: TObject);
 begin
-  with DModule.qCommon do begin
+  with DModule.qCommon do
+  begin
     SQL.Clear;
     SQL.Add('DECLARE @Proffession NVARCHAR(300) = :Proffession');
     SQL.Add('IF NOT EXISTS (SELECT * FROM sprProfessions');
     SQL.Add('               WHERE nameProffesion = @Proffession)');
     SQL.Add('INSERT INTO sprProfessions (nameProffesion)');
     SQL.Add('VALUES (@Proffession)');
-    Parameters.ParamByName('Proffession').Value:= edSprAddProffession.Text;
-    if ExecSQL >=1 then  ShowMessage('Äîáàâëåíà ïğîôåññèÿ: ' + #10 +
-                                    edSprAddProffession.Text);
+    Parameters.ParamByName('Proffession').Value := edSprAddProffession.Text;
+    if ExecSQL >= 1 then
+      ShowMessage('Äîáàâëåíà ïğîôåññèÿ: ' + #10 + edSprAddProffession.Text);
     DModule.qProffesions.Requery;
-    edSprAddProffession.Text:='';
+    edSprAddProffession.Text := '';
 
   end;
 end;
@@ -106,66 +110,77 @@ begin
   close;
 end;
 
-function SetAllÑonformity:boolean;
-var Res: boolean;
+function SetAllÑonformity: boolean;
+var
+  Res: boolean;
 begin
-  Res:=True;
-  With DModule.mdConformityDepartment do begin
-      DisableControls;
-      First;
-      while not eof do begin
-         if FieldByName('NameSpr').Value = '' then res:= False;
-         next;
-      end;
-      EnableControls;
+  Res := True;
+  With DModule.mdConformityDepartment do
+  begin
+    DisableControls;
+    First;
+    while not eof do
+    begin
+      if FieldByName('NameSpr').Value = '' then
+        Res := False;
+      next;
     end;
+    EnableControls;
+  end;
 
-    With DModule.mdConformityProffesion do begin
-      DisableControls;
-      First;
-      while not eof do begin
-          if FieldByName('NameSpr').Value = '' then res:= False;
-          next;
-      end;
-      EnableControls;
+  With DModule.mdConformityProffesion do
+  begin
+    DisableControls;
+    First;
+    while not eof do
+    begin
+      if FieldByName('NameSpr').Value = '' then
+        Res := False;
+      next;
     end;
+    EnableControls;
+  end;
 
-  Result:=Res;
+  Result := Res;
 end;
 
 procedure TfrmSettingÑonformity.btnConformityClick(Sender: TObject);
 begin
-  if SetAllÑonformity then begin
-      Form1.SetÑonformity;
-      Close;
-  end else
-      ShowMessage('Íå âñå öåõà/äîëæíîñòè ñîïîñòàâëåíû!');
+  if SetAllÑonformity then
+  begin
+    Form1.SetÑonformity;
+    close;
+  end
+  else
+    ShowMessage('Íå âñå öåõà/äîëæíîñòè ñîïîñòàâëåíû!');
 end;
 
 procedure TfrmSettingÑonformity.edSprAddProffessionChange(Sender: TObject);
 begin
-  btnAddSprProffesion.Enabled:= edSprAddProffession.Text<>'';
+  btnAddSprProffesion.Enabled := edSprAddProffession.Text <> '';
 end;
 
 procedure TfrmSettingÑonformity.edSprNameDepartmentChange(Sender: TObject);
 begin
-  btnAddSprDepartment.Enabled:= edSprNameDepartment.Text<>'';
+  btnAddSprDepartment.Enabled := edSprNameDepartment.Text <> '';
 end;
 
 procedure TfrmSettingÑonformity.btnAddSprDepartmentClick(Sender: TObject);
 begin
-  with DModule.qCommon do begin
+  with DModule.qCommon do
+  begin
     SQL.Clear;
     SQL.Add('DECLARE @Department NVARCHAR(300) = :Department');
     SQL.Add('IF NOT EXISTS (SELECT * FROM [sprDepartment]');
     SQL.Add('               WHERE nameDepartment = @Department)');
     SQL.Add('INSERT INTO sprDepartment (nameDepartment)');
     SQL.Add('VALUES (@Department)');
-    Parameters.ParamByName('Department').Value:= edSprNameDepartment.Text;
-    if ExecSQL >=1 then  ShowMessage('Äîáàâëåí öåõ/ïîäğàçäåëåíèå: ' + #10 +
-                                      edSprNameDepartment.Text);
+    Parameters.ParamByName('Department').Value := edSprNameDepartment.Text;
+    if ExecSQL >= 1 then
+      ShowMessage('Äîáàâëåí öåõ/ïîäğàçäåëåíèå: ' + #10 +
+        edSprNameDepartment.Text);
     DModule.qDepartments.Requery;
-    edSprNameDepartment.Text:='';
+    edSprNameDepartment.Text := '';
   end;
 end;
 

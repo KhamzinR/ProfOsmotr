@@ -11,9 +11,7 @@ object AppPagerForm: TAppPagerForm
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   Position = poDefault
-  PixelsPerInch = 96
   TextHeight = 13
   object scAppPager1: TscAppPager
     Left = 0
@@ -27,11 +25,14 @@ object AppPagerForm: TAppPagerForm
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
+    FluentUIOpaque = False
     TabOrder = 0
     TabStop = True
     Touch.InteractiveGestures = [igPan, igPressAndTap]
     Touch.InteractiveGestureOptions = [igoPanSingleFingerVertical, igoPanInertia, igoParentPassthrough]
     Caption = 'scAppPager1'
+    CaptionCursor = crDefault
+    CaptionCursorEnabled = False
     CaptionHeight = 100
     CaptionFont.Charset = DEFAULT_CHARSET
     CaptionFont.Color = clWhite
@@ -46,6 +47,8 @@ object AppPagerForm: TAppPagerForm
     CaptionGlowEffect.Intensive = True
     CaptionGlowEffect.StyleColors = True
     ChangePageWithItemSelection = True
+    DividerColor = clNone
+    ItemsTopOffset = 10
     ShowCaption = False
     CaptionImageIndex = 0
     CaptionLayout = blGlyphTop
@@ -168,6 +171,9 @@ object AppPagerForm: TAppPagerForm
       WallpaperIndex = -1
       CustomBackgroundImageIndex = -1
       FullUpdate = True
+      FluentUIOpaque = False
+      StorePaintBuffer = False
+      MouseWheelSupport = False
       BackgroundStyle = scsbsFormBackground
       object scLabel4: TscLabel
         AlignWithMargins = True
@@ -183,8 +189,10 @@ object AppPagerForm: TAppPagerForm
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
+        FluentUIOpaque = False
         TabOrder = 0
         DragForm = False
+        DragTopForm = True
         GlowEffect.Enabled = False
         GlowEffect.Color = clBtnShadow
         GlowEffect.AlphaValue = 255
@@ -218,6 +226,9 @@ object AppPagerForm: TAppPagerForm
       WallpaperIndex = -1
       CustomBackgroundImageIndex = -1
       FullUpdate = True
+      FluentUIOpaque = False
+      StorePaintBuffer = False
+      MouseWheelSupport = False
       BackgroundStyle = scsbsFormBackground
       object scLabel3: TscLabel
         AlignWithMargins = True
@@ -233,8 +244,10 @@ object AppPagerForm: TAppPagerForm
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
+        FluentUIOpaque = False
         TabOrder = 0
         DragForm = False
+        DragTopForm = True
         GlowEffect.Enabled = False
         GlowEffect.Color = clBtnShadow
         GlowEffect.AlphaValue = 255
@@ -268,6 +281,9 @@ object AppPagerForm: TAppPagerForm
       WallpaperIndex = -1
       CustomBackgroundImageIndex = -1
       FullUpdate = True
+      FluentUIOpaque = False
+      StorePaintBuffer = False
+      MouseWheelSupport = False
       BackgroundStyle = scsbsFormBackground
       object scLabel2: TscLabel
         AlignWithMargins = True
@@ -283,8 +299,10 @@ object AppPagerForm: TAppPagerForm
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
+        FluentUIOpaque = False
         TabOrder = 0
         DragForm = False
+        DragTopForm = True
         GlowEffect.Enabled = False
         GlowEffect.Color = clBtnShadow
         GlowEffect.AlphaValue = 255
@@ -317,6 +335,9 @@ object AppPagerForm: TAppPagerForm
       WallpaperIndex = 2
       CustomBackgroundImageIndex = 1
       FullUpdate = True
+      FluentUIOpaque = False
+      StorePaintBuffer = False
+      MouseWheelSupport = False
       BackgroundStyle = scsbsFormBackground
       object scLabel1: TscLabel
         AlignWithMargins = True
@@ -332,8 +353,10 @@ object AppPagerForm: TAppPagerForm
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
+        FluentUIOpaque = False
         TabOrder = 0
         DragForm = False
+        DragTopForm = True
         GlowEffect.Enabled = False
         GlowEffect.Color = clBtnShadow
         GlowEffect.AlphaValue = 255
@@ -357,6 +380,7 @@ object AppPagerForm: TAppPagerForm
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
+        FluentUIOpaque = False
         TabOrder = 1
         TabStop = True
         Touch.InteractiveGestures = [igPan, igPressAndTap]
@@ -405,6 +429,10 @@ object AppPagerForm: TAppPagerForm
             Button.ImageIndex = -1
             Button.ImageHotIndex = -1
             Button.ImagePressedIndex = -1
+            CustomColor = clNone
+            CustomColorAlpha = 255
+            CustomTextColor = clNone
+            CustomDetailTextColor = clNone
             ProgressBar.Min = 0
             ProgressBar.Max = 100
             ProgressBar.Value = 0
@@ -423,6 +451,10 @@ object AppPagerForm: TAppPagerForm
             Button.ImageIndex = -1
             Button.ImageHotIndex = -1
             Button.ImagePressedIndex = -1
+            CustomColor = clNone
+            CustomColorAlpha = 255
+            CustomTextColor = clNone
+            CustomDetailTextColor = clNone
             ProgressBar.Min = 0
             ProgressBar.Max = 100
             ProgressBar.Value = 0
@@ -441,6 +473,10 @@ object AppPagerForm: TAppPagerForm
             Button.ImageIndex = -1
             Button.ImageHotIndex = -1
             Button.ImagePressedIndex = -1
+            CustomColor = clNone
+            CustomColorAlpha = 255
+            CustomTextColor = clNone
+            CustomDetailTextColor = clNone
             ProgressBar.Min = 0
             ProgressBar.Max = 100
             ProgressBar.Value = 0
@@ -459,6 +495,10 @@ object AppPagerForm: TAppPagerForm
             Button.ImageIndex = -1
             Button.ImageHotIndex = -1
             Button.ImagePressedIndex = -1
+            CustomColor = clNone
+            CustomColorAlpha = 255
+            CustomTextColor = clNone
+            CustomDetailTextColor = clNone
             ProgressBar.Min = 0
             ProgressBar.Max = 100
             ProgressBar.Value = 0
@@ -477,6 +517,10 @@ object AppPagerForm: TAppPagerForm
             Button.ImageIndex = -1
             Button.ImageHotIndex = -1
             Button.ImagePressedIndex = -1
+            CustomColor = clNone
+            CustomColorAlpha = 255
+            CustomTextColor = clNone
+            CustomDetailTextColor = clNone
             ProgressBar.Min = 0
             ProgressBar.Max = 100
             ProgressBar.Value = 0
@@ -514,6 +558,8 @@ object AppPagerForm: TAppPagerForm
         DetailFont.Height = -11
         DetailFont.Name = 'Tahoma'
         DetailFont.Style = []
+        DetailPosition = sclbdBottom
+        DetailWordWrap = False
         ButtonFont.Charset = DEFAULT_CHARSET
         ButtonFont.Color = clWindowText
         ButtonFont.Height = -11
@@ -526,7 +572,14 @@ object AppPagerForm: TAppPagerForm
     end
   end
   object scStyledForm1: TscStyledForm
+    FluentUIBackground = scfuibNone
+    FluentUIAcrylicColor = clBtnFace
+    FluentUIAcrylicColorAlpha = 100
+    FluentUIBorder = True
+    FluentUIInactiveAcrylicColorOpaque = False
+    DWMClientRoundedCornersType = scDWMRoundedCornersDefault
     DWMClientShadow = False
+    DWMClientShadowHitTest = False
     DropDownForm = True
     DropDownAnimation = True
     DropDownBorderColor = 11038538
@@ -562,12 +615,19 @@ object AppPagerForm: TAppPagerForm
     TabIndex = 0
     TabsPosition = sctpLeft
     ShowInactiveTab = True
+    CaptionWallpaperIndex = -1
+    CaptionWallpaperInActiveIndex = -1
+    CaptionWallpaperLeftMargin = 1
+    CaptionWallpaperTopMargin = 1
+    CaptionWallpaperRightMargin = 1
+    CaptionWallpaperBottomMargin = 1
     OnChangeScale = scStyledForm1ChangeScale
     OnCloseUp = scStyledForm1CloseUp
     Left = 280
     Top = 200
   end
   object scGPVirtualImageList2: TscGPVirtualImageList
+    DirectDraw = True
     PixelOffsetMode = scgppomDefault
     InterpolationMode = scgppimDefault
     Width = 32
@@ -577,7 +637,6 @@ object AppPagerForm: TAppPagerForm
     SourceImageCollection = scGPImageCollection1
     Left = 424
     Top = 200
-    Bitmap = {}
   end
   object scGPImageCollection1: TscGPImageCollection
     Images = <
@@ -743,6 +802,8 @@ object AppPagerForm: TAppPagerForm
         TileOffsetY = 0
         Proportional = False
         Scaled = True
+        PixelOffsetModeHighQuality = True
+        InterpolationModeHighQuality = True
       end
       item
         PngImage.Data = {
@@ -830,6 +891,8 @@ object AppPagerForm: TAppPagerForm
         TileOffsetY = 0
         Proportional = False
         Scaled = True
+        PixelOffsetModeHighQuality = True
+        InterpolationModeHighQuality = True
       end
       item
         PngImage.Data = {
@@ -937,6 +1000,8 @@ object AppPagerForm: TAppPagerForm
         TileOffsetY = 0
         Proportional = False
         Scaled = True
+        PixelOffsetModeHighQuality = True
+        InterpolationModeHighQuality = True
       end
       item
         PngImage.Data = {
@@ -1007,6 +1072,8 @@ object AppPagerForm: TAppPagerForm
         TileOffsetY = 0
         Proportional = False
         Scaled = True
+        PixelOffsetModeHighQuality = True
+        InterpolationModeHighQuality = True
       end
       item
         PngImage.Data = {
@@ -1113,6 +1180,8 @@ object AppPagerForm: TAppPagerForm
         TileOffsetY = 0
         Proportional = False
         Scaled = True
+        PixelOffsetModeHighQuality = True
+        InterpolationModeHighQuality = True
       end
       item
         PngImage.Data = {
@@ -1216,6 +1285,8 @@ object AppPagerForm: TAppPagerForm
         TileOffsetY = 0
         Proportional = False
         Scaled = True
+        PixelOffsetModeHighQuality = True
+        InterpolationModeHighQuality = True
       end>
     Left = 424
     Top = 112

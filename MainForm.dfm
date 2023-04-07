@@ -7024,7 +7024,7 @@
               TabOrder = 8
               object Label45: TLabel
                 AlignWithMargins = True
-                Left = 44
+                Left = 6
                 Top = 5
                 Width = 68
                 Height = 24

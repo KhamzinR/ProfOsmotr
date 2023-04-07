@@ -2,24 +2,22 @@ object frmSprDangerFactors: TfrmSprDangerFactors
   Left = 0
   Top = 0
   Caption = 'frmSprDangerFactors'
-  ClientHeight = 606
-  ClientWidth = 1035
+  ClientHeight = 597
+  ClientWidth = 1029
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object cxGrid1: TcxGrid
     Left = 0
     Top = 0
-    Width = 1035
-    Height = 606
+    Width = 1029
+    Height = 597
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -29,10 +27,13 @@ object frmSprDangerFactors: TfrmSprDangerFactors
     ParentFont = False
     TabOrder = 0
     LookAndFeel.ScrollbarMode = sbmDefault
+    ExplicitWidth = 1035
+    ExplicitHeight = 606
     object cxGrid1DBTableView1: TcxGridDBTableView
       Navigator.Buttons.CustomButtons = <>
       Navigator.Visible = True
       FindPanel.InfoText = #1055#1086#1080#1089#1082
+      ScrollbarAnnotations.CustomAnnotations = <>
       OnCellDblClick = cxGrid1DBTableView1CellDblClick
       DataController.DataSource = DModule.dsFactors
       DataController.Summary.DefaultGroupSummaryItems = <>
@@ -86,6 +87,7 @@ object frmSprDangerFactors: TfrmSprDangerFactors
     end
     object cxGrid1DBTableView2: TcxGridDBTableView
       Navigator.Buttons.CustomButtons = <>
+      ScrollbarAnnotations.CustomAnnotations = <>
       DataController.DataSource = DModule.dsFactors
       DataController.Summary.DefaultGroupSummaryItems = <>
       DataController.Summary.FooterSummaryItems = <>
@@ -102,6 +104,7 @@ object frmSprDangerFactors: TfrmSprDangerFactors
     end
     object cxGrid1DBTableView3: TcxGridDBTableView
       Navigator.Buttons.CustomButtons = <>
+      ScrollbarAnnotations.CustomAnnotations = <>
       DataController.DataSource = DModule.dsGroupSubstances
       DataController.Summary.DefaultGroupSummaryItems = <>
       DataController.Summary.FooterSummaryItems = <>
@@ -115,6 +118,7 @@ object frmSprDangerFactors: TfrmSprDangerFactors
     end
     object cxGrid1DBTableView4: TcxGridDBTableView
       Navigator.Buttons.CustomButtons = <>
+      ScrollbarAnnotations.CustomAnnotations = <>
       DataController.DataSource = DModule.dsFactorDoctor
       DataController.Summary.DefaultGroupSummaryItems = <>
       DataController.Summary.FooterSummaryItems = <>

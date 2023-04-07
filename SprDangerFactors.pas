@@ -3,7 +3,8 @@ unit SprDangerFactors;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxControls, cxLookAndFeels,
   cxLookAndFeelPainters, cxStyles, cxCustomData, cxFilter, cxData,
   cxDataStorage, cxEdit, cxNavigator, dxDateRanges,
@@ -25,7 +26,9 @@ uses
   dxSkinTheBezier, dxSkinsDefaultPainters, dxSkinValentine,
   dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
-  dxSkinXmas2008Blue;
+  dxSkinXmas2008Blue, dxSkinBasic, dxSkiniMaginary, dxSkinOffice2019Black,
+  dxSkinOffice2019Colorful, dxSkinOffice2019DarkGray, dxSkinOffice2019White,
+  dxScrollbarAnnotations;
 
 type
   TfrmSprDangerFactors = class(TForm)
@@ -75,16 +78,16 @@ implementation
 
 uses DangerFactor, DM;
 
-procedure TfrmSprDangerFactors.cxGrid1DBTableView1CellDblClick(Sender: TcxCustomGridTableView;
-  ACellViewInfo: TcxGridTableDataCellViewInfo; AButton: TMouseButton;
-  AShift: TShiftState; var AHandled: Boolean);
+procedure TfrmSprDangerFactors.cxGrid1DBTableView1CellDblClick
+  (Sender: TcxCustomGridTableView; ACellViewInfo: TcxGridTableDataCellViewInfo;
+  AButton: TMouseButton; AShift: TShiftState; var AHandled: Boolean);
 begin
   frmDangerFactor.ShowModal;
 end;
 
 procedure TfrmSprDangerFactors.FormShow(Sender: TObject);
 begin
- //cxGrid1DBTableView1.DataController.Groups.FullExpand;
+  // cxGrid1DBTableView1.DataController.Groups.FullExpand;
 end;
 
 end.

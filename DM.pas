@@ -179,14 +179,12 @@ type
     procedure FilterDataSet(aFilterFunc: TdxMemDataFilterRecord);
   end;
 
-
 var
   DModule: TDModule;
 
 implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
-
 {$R *.dfm}
 
 procedure TdxMemDataHelper.FilterDataSet(aFilterFunc: TdxMemDataFilterRecord);
@@ -208,6 +206,5 @@ begin
     EnableControls;
   end;
 end;
-
 
 end.

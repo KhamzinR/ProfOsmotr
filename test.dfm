@@ -3,8 +3,8 @@ object test2: Ttest2
   Top = 0
   BorderStyle = bsSingle
   Caption = 'test2'
-  ClientHeight = 331
-  ClientWidth = 688
+  ClientHeight = 322
+  ClientWidth = 682
   Color = clHighlight
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,12 +12,10 @@ object test2: Ttest2
   Font.Name = 'Tahoma'
   Font.Style = []
   FormStyle = fsMDIChild
-  OldCreateOrder = False
   Position = poScreenCenter
   Visible = True
   WindowState = wsMaximized
   OnClose = FormClose
-  PixelsPerInch = 96
   TextHeight = 13
   object Memo1: TMemo
     Left = 136

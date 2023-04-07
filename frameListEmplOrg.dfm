@@ -92,13 +92,14 @@ object frmListEmployeeOrg: TfrmListEmployeeOrg
       Left = 784
       Top = 8
       Width = 241
-      Height = 21
+      Height = 23
       Anchors = [akTop, akRight]
-      EditLabel.Width = 72
-      EditLabel.Height = 13
+      EditLabel.Width = 74
+      EditLabel.Height = 23
       EditLabel.Caption = #1060#1080#1083#1100#1090#1088#1086#1074#1072#1090#1100':'
       LabelPosition = lpLeft
       TabOrder = 0
+      Text = ''
     end
     object Button5: TButton
       AlignWithMargins = True
@@ -127,6 +128,7 @@ object frmListEmployeeOrg: TfrmListEmployeeOrg
     ExplicitHeight = 487
     object cxGrid1DBTableView1: TcxGridDBTableView
       Navigator.Buttons.CustomButtons = <>
+      ScrollbarAnnotations.CustomAnnotations = <>
       DataController.DataSource = DModule.dsListEmplOrg
       DataController.Summary.DefaultGroupSummaryItems = <>
       DataController.Summary.FooterSummaryItems = <>

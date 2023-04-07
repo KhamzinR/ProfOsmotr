@@ -3,26 +3,26 @@
   Top = 0
   BorderStyle = bsDialog
   Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1072' '#1089#1086#1086#1090#1074#1077#1090#1089#1090#1074#1080#1081
-  ClientHeight = 555
-  ClientWidth = 1111
+  ClientHeight = 546
+  ClientWidth = 1105
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
-  PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 514
-    Width = 1111
+    Top = 505
+    Width = 1105
     Height = 41
     Align = alBottom
     BevelOuter = bvLowered
     TabOrder = 0
+    ExplicitTop = 514
+    ExplicitWidth = 1111
     object Button1: TButton
       AlignWithMargins = True
       Left = 1032
@@ -92,7 +92,7 @@
         object Label3: TLabel
           Left = 2
           Top = 15
-          Width = 140
+          Width = 40
           Height = 16
           Align = alClient
           Alignment = taCenter
@@ -103,7 +103,6 @@
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitWidth = 40
         end
       end
       object GroupBox2: TGroupBox
@@ -120,7 +119,7 @@
         object Label4: TLabel
           Left = 2
           Top = 15
-          Width = 116
+          Width = 40
           Height = 16
           Align = alClient
           Alignment = taCenter
@@ -131,7 +130,6 @@
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
-          ExplicitWidth = 40
         end
       end
     end
@@ -139,7 +137,7 @@
   object cxGrid1: TcxGrid
     Left = 0
     Top = 0
-    Width = 1111
+    Width = 1105
     Height = 221
     Align = alTop
     Font.Charset = DEFAULT_CHARSET
@@ -151,8 +149,10 @@
     TabOrder = 1
     ExplicitLeft = 1
     ExplicitTop = -2
+    ExplicitWidth = 1111
     object cxGrid1DBTableView1: TcxGridDBTableView
       Navigator.Buttons.CustomButtons = <>
+      ScrollbarAnnotations.CustomAnnotations = <>
       DataController.DataSource = DModule.dsConformityDepartment
       DataController.Summary.DefaultGroupSummaryItems = <>
       DataController.Summary.FooterSummaryItems = <>
@@ -211,8 +211,8 @@
   object cxGrid2: TcxGrid
     Left = 0
     Top = 256
-    Width = 1111
-    Height = 223
+    Width = 1105
+    Height = 214
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -222,8 +222,11 @@
     ParentFont = False
     TabOrder = 2
     ExplicitTop = 258
+    ExplicitWidth = 1111
+    ExplicitHeight = 223
     object cxGridDBTableView1: TcxGridDBTableView
       Navigator.Buttons.CustomButtons = <>
+      ScrollbarAnnotations.CustomAnnotations = <>
       DataController.DataSource = DModule.dsConformityProffesion
       DataController.Summary.DefaultGroupSummaryItems = <>
       DataController.Summary.FooterSummaryItems = <>
@@ -277,15 +280,16 @@
   object Panel3: TPanel
     Left = 0
     Top = 221
-    Width = 1111
+    Width = 1105
     Height = 35
     Align = alTop
     TabOrder = 3
+    ExplicitWidth = 1111
     object Label1: TLabel
       Left = 1
       Top = 1
       Width = 231
-      Height = 33
+      Height = 19
       Align = alLeft
       Alignment = taCenter
       Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1074' '#1089#1087#1088#1072#1074#1086#1095#1085#1080#1082' '#1094#1077#1093#1086#1074': '
@@ -296,7 +300,6 @@
       Font.Style = []
       ParentFont = False
       Layout = tlCenter
-      ExplicitHeight = 19
     end
     object edSprNameDepartment: TEdit
       AlignWithMargins = True
@@ -334,16 +337,18 @@
   end
   object Panel4: TPanel
     Left = 0
-    Top = 479
-    Width = 1111
+    Top = 470
+    Width = 1105
     Height = 35
     Align = alBottom
     TabOrder = 4
+    ExplicitTop = 479
+    ExplicitWidth = 1111
     object Label2: TLabel
       Left = 1
       Top = 1
       Width = 268
-      Height = 33
+      Height = 19
       Align = alLeft
       Alignment = taCenter
       Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1074' '#1089#1087#1088#1072#1074#1086#1095#1085#1080#1082' '#1087#1088#1086#1092#1077#1089#1089#1080#1081': '
@@ -354,7 +359,6 @@
       Font.Style = []
       ParentFont = False
       Layout = tlCenter
-      ExplicitHeight = 19
     end
     object edSprAddProffession: TEdit
       AlignWithMargins = True

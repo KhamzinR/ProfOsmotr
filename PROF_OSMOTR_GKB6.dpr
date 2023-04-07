@@ -2,19 +2,20 @@ program PROF_OSMOTR_GKB6;
 
 uses
   Vcl.Forms,
-  MainForm in 'MainForm.pas' {Form1},
+  MainForm in 'MainForm.pas' {Form1} ,
   Vcl.Themes,
   Vcl.Styles,
-  Unit2 in 'Unit2.pas' {AppPagerForm},
-  frameListEmplOrg in 'frameListEmplOrg.pas' {frmListEmployeeOrg: TFrame},
-  Unit4 in 'Unit4.pas' {Frame4: TFrame},
-  DM in 'DM.pas' {DModule: TDataModule},
-  createListEmployee in 'createListEmployee.pas' {frameCreateListEmplOrg: TFrame},
-  test in 'test.pas' {test2},
-  Unit5 in 'Unit5.pas' {Form5},
-  Setting—onformity in 'Setting—onformity.pas' {frmSetting—onformity},
-  Talon in 'Talon.pas' {TalonProfOsmotr},
-  DangerFactor in 'DangerFactor.pas' {frmDangerFactor},
+  Unit2 in 'Unit2.pas' {AppPagerForm} ,
+  frameListEmplOrg in 'frameListEmplOrg.pas' {frmListEmployeeOrg: TFrame} ,
+  Unit4 in 'Unit4.pas' {Frame4: TFrame} ,
+  DM in 'DM.pas' {DModule: TDataModule} ,
+  createListEmployee
+    in 'createListEmployee.pas' {frameCreateListEmplOrg: TFrame} ,
+  test in 'test.pas' {test2} ,
+  Unit5 in 'Unit5.pas' {Form5} ,
+  Setting—onformity in 'Setting—onformity.pas' {frmSetting—onformity} ,
+  Talon in 'Talon.pas' {TalonProfOsmotr} ,
+  DangerFactor in 'DangerFactor.pas' {frmDangerFactor} ,
   SprDangerFactors in 'SprDangerFactors.pas' {frmSprDangerFactors};
 
 {$R *.res}
@@ -31,4 +32,5 @@ begin
   Application.CreateForm(TfrmDangerFactor, frmDangerFactor);
   Application.CreateForm(TfrmSprDangerFactors, frmSprDangerFactors);
   Application.Run;
+
 end.

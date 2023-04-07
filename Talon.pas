@@ -3,7 +3,8 @@ unit Talon;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxControls, cxLookAndFeels,
   cxLookAndFeelPainters, cxStyles, cxCustomData, cxFilter, cxData,
   cxDataStorage, cxEdit, cxNavigator, dxDateRanges,
@@ -26,7 +27,9 @@ uses
   dxSkinTheBezier, dxSkinsDefaultPainters, dxSkinValentine,
   dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
   dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
-  dxSkinXmas2008Blue;
+  dxSkinXmas2008Blue, dxSkinBasic, dxSkiniMaginary, dxSkinOffice2019Black,
+  dxSkinOffice2019Colorful, dxSkinOffice2019DarkGray, dxSkinOffice2019White,
+  dxScrollbarAnnotations;
 
 type
   TTalonProfOsmotr = class(TForm)
@@ -82,32 +85,35 @@ uses DM;
 
 procedure TTalonProfOsmotr.Button1Click(Sender: TObject);
 var
-  S:string;
+  S: string;
 begin
-  with DModule.dxMemDataFactor do begin
-      if not locate('ppFactor',lkppFactor.EditValue,[]) then begin
+  with DModule.dxMemDataFactor do
+  begin
+    if not locate('ppFactor', lkppFactor.EditValue, []) then
+    begin
 
-          Append;
-          FieldByName('ppFactor').Value := lkppFactor.EditValue;
-          FieldByName('descFactor').Value := lkDescFactor.EditValue;
-          Post;
+      Append;
+      FieldByName('ppFactor').Value := lkppFactor.EditValue;
+      FieldByName('descFactor').Value := lkDescFactor.EditValue;
+      Post;
 
-          S:='';
-          First;
-          while not EOF do begin
-            S:=S + FieldByName('ppFactor').Value + '  ';
-            next;
-          end;
-
-          lbFactor.Caption:= S;
+      S := '';
+      First;
+      while not EOF do
+      begin
+        S := S + FieldByName('ppFactor').Value + '  ';
+        next;
       end;
+
+      lbFactor.Caption := S;
+    end;
 
   end;
 end;
 
 procedure TTalonProfOsmotr.FormShow(Sender: TObject);
 begin
-  lbFIOandAGE.Caption:= 'Мария Химозина Николаевна, 56 лет'
+  lbFIOandAGE.Caption := 'Мария Химозина Николаевна, 56 лет'
 end;
 
 end.
