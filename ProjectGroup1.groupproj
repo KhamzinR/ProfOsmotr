@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{9542E5AB-595E-48D2-932D-7F20117E4BDC}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PROF_OSMOTR_GKB6.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="H:\9999\DevExpress\DevExpress VCL 19.1.2 Full Source with DxAutoInstaller 2.2.2\DevExpressVCL19.1.2\ExpressRichEdit Control\Packages\dxRichEditControlHtmlFormatRS27.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="H:\9999\DevExpress\DevExpress VCL 19.1.2 Full Source with DxAutoInstaller 2.2.2\DevExpressVCL19.1.2\ExpressCore Library\Packages\dcldxCoreRS27.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PROF_OSMOTR_GKB6">
+        <MSBuild Projects="PROF_OSMOTR_GKB6.dproj"/>
+    </Target>
+    <Target Name="PROF_OSMOTR_GKB6:Clean">
+        <MSBuild Projects="PROF_OSMOTR_GKB6.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PROF_OSMOTR_GKB6:Make">
+        <MSBuild Projects="PROF_OSMOTR_GKB6.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="dxRichEditControlHtmlFormatRS27">
+        <MSBuild Projects="H:\9999\DevExpress\DevExpress VCL 19.1.2 Full Source with DxAutoInstaller 2.2.2\DevExpressVCL19.1.2\ExpressRichEdit Control\Packages\dxRichEditControlHtmlFormatRS27.dproj"/>
+    </Target>
+    <Target Name="dxRichEditControlHtmlFormatRS27:Clean">
+        <MSBuild Projects="H:\9999\DevExpress\DevExpress VCL 19.1.2 Full Source with DxAutoInstaller 2.2.2\DevExpressVCL19.1.2\ExpressRichEdit Control\Packages\dxRichEditControlHtmlFormatRS27.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="dxRichEditControlHtmlFormatRS27:Make">
+        <MSBuild Projects="H:\9999\DevExpress\DevExpress VCL 19.1.2 Full Source with DxAutoInstaller 2.2.2\DevExpressVCL19.1.2\ExpressRichEdit Control\Packages\dxRichEditControlHtmlFormatRS27.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="dcldxCoreRS27">
+        <MSBuild Projects="H:\9999\DevExpress\DevExpress VCL 19.1.2 Full Source with DxAutoInstaller 2.2.2\DevExpressVCL19.1.2\ExpressCore Library\Packages\dcldxCoreRS27.dproj"/>
+    </Target>
+    <Target Name="dcldxCoreRS27:Clean">
+        <MSBuild Projects="H:\9999\DevExpress\DevExpress VCL 19.1.2 Full Source with DxAutoInstaller 2.2.2\DevExpressVCL19.1.2\ExpressCore Library\Packages\dcldxCoreRS27.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="dcldxCoreRS27:Make">
+        <MSBuild Projects="H:\9999\DevExpress\DevExpress VCL 19.1.2 Full Source with DxAutoInstaller 2.2.2\DevExpressVCL19.1.2\ExpressCore Library\Packages\dcldxCoreRS27.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PROF_OSMOTR_GKB6;dxRichEditControlHtmlFormatRS27;dcldxCoreRS27"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PROF_OSMOTR_GKB6:Clean;dxRichEditControlHtmlFormatRS27:Clean;dcldxCoreRS27:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PROF_OSMOTR_GKB6:Make;dxRichEditControlHtmlFormatRS27:Make;dcldxCoreRS27:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
