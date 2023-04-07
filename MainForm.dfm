@@ -85,8 +85,6 @@
     Sizeable = True
     WallpaperIndex = -1
     WordWrap = False
-    ExplicitWidth = 1175
-    ExplicitHeight = 760
     object scGPPanel2: TscGPPanel
       Left = 1
       Top = 1
@@ -137,7 +135,6 @@
       Sizeable = False
       WallpaperIndex = -1
       WordWrap = False
-      ExplicitWidth = 1173
       object CloseButton: TscGPGlyphButton
         AlignWithMargins = True
         Left = 1312
@@ -258,7 +255,6 @@
         GroupIndex = 0
         AllowAllUp = False
         ToggleMode = False
-        ExplicitLeft = 1128
       end
       object MinButton: TscGPGlyphButton
         AlignWithMargins = True
@@ -380,7 +376,6 @@
         GroupIndex = 0
         AllowAllUp = False
         ToggleMode = False
-        ExplicitLeft = 1038
       end
       object scLabel1: TscLabel
         Left = 95
@@ -419,7 +414,6 @@
         ShowEllipsis = True
         UseFontColorToStyleColor = True
         Caption = #1055#1056#1054#1060#1048#1051#1040#1050#1058#1048#1063#1045#1057#1050#1048#1045' '#1054#1057#1052#1054#1058#1056#1067' - '#1043#1050#1041' '#8470'6 '#1063#1045#1051#1071#1041#1048#1053#1057#1050
-        ExplicitWidth = 515
       end
       object scGPGlyphButton2: TscGPGlyphButton
         AlignWithMargins = True
@@ -900,7 +894,6 @@
         GroupIndex = 0
         AllowAllUp = False
         ToggleMode = False
-        ExplicitLeft = 1083
       end
       object scGPGlyphButton1: TscGPGlyphButton
         AlignWithMargins = True
@@ -1021,7 +1014,6 @@
         GroupIndex = 0
         AllowAllUp = False
         ToggleMode = False
-        ExplicitLeft = 958
       end
       object scGPGlyphButton5: TscGPGlyphButton
         AlignWithMargins = True
@@ -1262,7 +1254,6 @@
         GroupIndex = 0
         AllowAllUp = False
         ToggleMode = False
-        ExplicitLeft = 993
       end
       object scGPPanel4: TscGPPanel
         Left = 794
@@ -1310,7 +1301,6 @@
         Sizeable = False
         WallpaperIndex = -1
         WordWrap = False
-        ExplicitLeft = 610
         object scGPEdit1: TscGPEdit
           Left = 3
           Top = 5
@@ -1446,8 +1436,6 @@
       Sizeable = False
       WallpaperIndex = -1
       WordWrap = False
-      ExplicitTop = 749
-      ExplicitWidth = 1173
       object scProgressBar1: TscProgressBar
         Left = 0
         Top = 1
@@ -1473,7 +1461,6 @@
         MaxValue = 100
         Value = 0
         Vertical = False
-        ExplicitWidth = 1173
       end
     end
     object scGPToolPager1: TscGPToolPager
@@ -1727,7 +1714,6 @@
       ActivePage = scGPToolPagerPage1
       FreeOnClose = False
       StorePaintBuffer = False
-      ExplicitWidth = 1173
       DesignSize = (
         1357
         150)
@@ -1850,7 +1836,6 @@
         GroupIndex = 0
         AllowAllUp = False
         ToggleMode = False
-        ExplicitLeft = 1135
       end
       object scGPGlyphButton8: TscGPGlyphButton
         AlignWithMargins = True
@@ -1978,7 +1963,6 @@
         GroupIndex = 0
         AllowAllUp = False
         ToggleMode = False
-        ExplicitLeft = 946
       end
       object MenuButton: TscGPButton
         Left = -1
@@ -3401,8 +3385,6 @@
           Page = PageCardTalon
         end>
       ActivePage = PageCardTalon
-      ExplicitWidth = 1173
-      ExplicitHeight = 564
       object PageListEmpl: TscPageViewerPage
         Left = 0
         Top = 0
@@ -3429,8 +3411,6 @@
         StorePaintBuffer = False
         MouseWheelSupport = False
         BackgroundStyle = scsbsFormBackground
-        ExplicitWidth = 1173
-        ExplicitHeight = 564
         object Panel2: TPanel
           Left = 0
           Top = 0
@@ -3439,7 +3419,6 @@
           Align = alTop
           BevelOuter = bvLowered
           TabOrder = 0
-          ExplicitWidth = 1173
           object Button4: TButton
             AlignWithMargins = True
             Left = 778
@@ -3457,7 +3436,6 @@
             Images = cxImageList1
             ParentFont = False
             TabOrder = 0
-            ExplicitLeft = 594
           end
           object Button10: TButton
             AlignWithMargins = True
@@ -3477,7 +3455,6 @@
             ParentFont = False
             TabOrder = 1
             OnClick = Button10Click
-            ExplicitLeft = 958
           end
           object Button11: TButton
             AlignWithMargins = True
@@ -3495,7 +3472,6 @@
             Images = cxImageList1
             ParentFont = False
             TabOrder = 2
-            ExplicitLeft = 776
           end
           object Button12: TButton
             AlignWithMargins = True
@@ -3515,7 +3491,6 @@
             ParentFont = False
             TabOrder = 3
             OnClick = Button12Click
-            ExplicitLeft = 412
           end
           object Edit2: TEdit
             AlignWithMargins = True
@@ -3548,8 +3523,6 @@
           Font.Style = []
           ParentFont = False
           TabOrder = 1
-          ExplicitWidth = 1173
-          ExplicitHeight = 482
           object cxGrid2DBTableView1: TcxGridDBTableView
             Navigator.Buttons.CustomButtons = <>
             ScrollbarAnnotations.CustomAnnotations = <>
@@ -3653,8 +3626,6 @@
           Height = 41
           Align = alBottom
           TabOrder = 2
-          ExplicitTop = 523
-          ExplicitWidth = 1173
         end
       end
       object PageADDListEmpl: TscPageViewerPage
@@ -3683,8 +3654,6 @@
         StorePaintBuffer = False
         MouseWheelSupport = False
         BackgroundStyle = scsbsFormBackground
-        ExplicitWidth = 1173
-        ExplicitHeight = 564
         object GroupBox1: TGroupBox
           AlignWithMargins = True
           Left = 3
@@ -3700,7 +3669,6 @@
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 0
-          ExplicitWidth = 1167
           object Label1: TLabel
             Left = 24
             Top = 32
@@ -3895,7 +3863,6 @@
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 1
-          ExplicitWidth = 1167
           object Label4: TLabel
             Left = 446
             Top = 30
@@ -4042,8 +4009,6 @@
           Height = 41
           Align = alBottom
           TabOrder = 2
-          ExplicitTop = 520
-          ExplicitWidth = 1167
           object Button6: TButton
             AlignWithMargins = True
             Left = 202
@@ -4078,7 +4043,6 @@
             ParentFont = False
             TabOrder = 1
             OnClick = Button8Click
-            ExplicitLeft = 1045
           end
           object Button9: TButton
             AlignWithMargins = True
@@ -4097,7 +4061,6 @@
             ParentFont = False
             TabOrder = 2
             OnClick = Button9Click
-            ExplicitLeft = 921
           end
           object Button27: TButton
             AlignWithMargins = True
@@ -4135,8 +4098,6 @@
           Font.Style = []
           ParentFont = False
           TabOrder = 3
-          ExplicitWidth = 1167
-          ExplicitHeight = 163
           object cxGrid1: TcxGrid
             AlignWithMargins = True
             Left = 5
@@ -4146,8 +4107,6 @@
             Align = alClient
             Enabled = False
             TabOrder = 0
-            ExplicitWidth = 1157
-            ExplicitHeight = 134
           end
         end
       end
@@ -4177,8 +4136,6 @@
         StorePaintBuffer = False
         MouseWheelSupport = False
         BackgroundStyle = scsbsFormBackground
-        ExplicitWidth = 1173
-        ExplicitHeight = 564
         object Panel4: TPanel
           Left = 0
           Top = 625
@@ -4186,8 +4143,6 @@
           Height = 41
           Align = alBottom
           TabOrder = 0
-          ExplicitTop = 523
-          ExplicitWidth = 1173
           object Button14: TButton
             AlignWithMargins = True
             Left = 1028
@@ -4204,7 +4159,6 @@
             Font.Style = []
             ParentFont = False
             TabOrder = 0
-            ExplicitLeft = 844
           end
           object Button13: TButton
             AlignWithMargins = True
@@ -4222,7 +4176,6 @@
             Font.Style = []
             ParentFont = False
             TabOrder = 1
-            ExplicitLeft = 990
           end
         end
         object GroupBox4: TGroupBox
@@ -4371,7 +4324,6 @@
           Font.Style = [fsBold]
           ParentFont = False
           TabOrder = 3
-          ExplicitWidth = 1173
           object Label12: TLabel
             Left = 17
             Top = 42
@@ -4536,8 +4488,6 @@
         StorePaintBuffer = False
         MouseWheelSupport = False
         BackgroundStyle = scsbsFormBackground
-        ExplicitWidth = 1173
-        ExplicitHeight = 564
         object Panel6: TPanel
           Left = 0
           Top = 625
@@ -4545,8 +4495,6 @@
           Height = 41
           Align = alBottom
           TabOrder = 0
-          ExplicitTop = 523
-          ExplicitWidth = 1173
         end
         object Panel5: TPanel
           Left = 0
@@ -4555,7 +4503,6 @@
           Height = 41
           Align = alTop
           TabOrder = 1
-          ExplicitWidth = 1173
           object Button16: TButton
             AlignWithMargins = True
             Left = 960
@@ -4573,7 +4520,6 @@
             Images = cxImageList1
             ParentFont = False
             TabOrder = 0
-            ExplicitLeft = 776
           end
           object Button17: TButton
             AlignWithMargins = True
@@ -4591,7 +4537,6 @@
             Images = cxImageList1
             ParentFont = False
             TabOrder = 1
-            ExplicitLeft = 594
           end
           object Button18: TButton
             AlignWithMargins = True
@@ -4610,7 +4555,6 @@
             Images = cxImageList1
             ParentFont = False
             TabOrder = 2
-            ExplicitLeft = 958
           end
           object Button19: TButton
             AlignWithMargins = True
@@ -4630,7 +4574,6 @@
             ParentFont = False
             TabOrder = 3
             OnClick = Button19Click
-            ExplicitLeft = 412
           end
           object Edit3: TEdit
             AlignWithMargins = True
@@ -4663,8 +4606,6 @@
           Font.Style = []
           ParentFont = False
           TabOrder = 2
-          ExplicitWidth = 1173
-          ExplicitHeight = 482
           object cxGrid3DBTableView1: TcxGridDBTableView
             Navigator.Buttons.CustomButtons = <>
             ScrollbarAnnotations.CustomAnnotations = <>
@@ -4736,8 +4677,6 @@
         StorePaintBuffer = False
         MouseWheelSupport = False
         BackgroundStyle = scsbsFormBackground
-        ExplicitWidth = 1173
-        ExplicitHeight = 564
         object Panel7: TPanel
           Left = 0
           Top = 0
@@ -4745,7 +4684,6 @@
           Height = 57
           Align = alTop
           TabOrder = 0
-          ExplicitWidth = 1173
           object Label9: TLabel
             Left = 19
             Top = 16
@@ -4786,8 +4724,6 @@
           Font.Style = []
           ParentFont = False
           TabOrder = 1
-          ExplicitWidth = 1173
-          ExplicitHeight = 507
           object cxGrid4DBTableView1: TcxGridDBTableView
             Navigator.Buttons.CustomButtons = <>
             ScrollbarAnnotations.CustomAnnotations = <>
@@ -4867,8 +4803,6 @@
         StorePaintBuffer = False
         MouseWheelSupport = False
         BackgroundStyle = scsbsFormBackground
-        ExplicitWidth = 1173
-        ExplicitHeight = 564
         object Panel8: TPanel
           Left = 0
           Top = 0
@@ -4876,7 +4810,6 @@
           Height = 161
           Align = alTop
           TabOrder = 0
-          ExplicitWidth = 1173
           object GroupBox8: TGroupBox
             AlignWithMargins = True
             Left = 4
@@ -5098,8 +5031,6 @@
           Font.Style = []
           ParentFont = False
           TabOrder = 1
-          ExplicitWidth = 1173
-          ExplicitHeight = 365
           object cxGrid5DBTableView1: TcxGridDBTableView
             Navigator.Buttons.CustomButtons = <>
             ScrollbarAnnotations.CustomAnnotations = <>
@@ -5241,8 +5172,6 @@
           Height = 38
           Align = alBottom
           TabOrder = 2
-          ExplicitTop = 526
-          ExplicitWidth = 1173
           object Button21: TButton
             AlignWithMargins = True
             Left = 1209
@@ -5255,7 +5184,6 @@
             ImageMargins.Left = 5
             Images = cxImageList2
             TabOrder = 0
-            ExplicitLeft = 1025
           end
           object Button22: TButton
             AlignWithMargins = True
@@ -5305,7 +5233,6 @@
             Align = alRight
             BevelOuter = bvLowered
             TabOrder = 4
-            ExplicitLeft = 834
             object Label25: TLabel
               Left = 97
               Top = 1
@@ -5364,8 +5291,6 @@
         StorePaintBuffer = False
         MouseWheelSupport = False
         BackgroundStyle = scsbsFormBackground
-        ExplicitWidth = 1173
-        ExplicitHeight = 564
         object Panel11: TPanel
           Left = 0
           Top = 622
@@ -5380,8 +5305,6 @@
           Font.Style = []
           ParentFont = False
           TabOrder = 0
-          ExplicitTop = 520
-          ExplicitWidth = 1173
           object btnLoadBase: TButton
             AlignWithMargins = True
             Left = 1106
@@ -5401,7 +5324,6 @@
             ParentFont = False
             TabOrder = 0
             OnClick = btnLoadBaseClick
-            ExplicitLeft = 922
           end
           object btnClose: TButton
             AlignWithMargins = True
@@ -5424,7 +5346,6 @@
             ParentFont = False
             TabOrder = 1
             OnClick = btnCloseClick
-            ExplicitLeft = 784
           end
           object GroupBox10: TGroupBox
             Left = 109
@@ -5585,8 +5506,6 @@
           Height = 622
           Align = alClient
           TabOrder = 1
-          ExplicitWidth = 1173
-          ExplicitHeight = 520
           object cxGrid6DBTableView1: TcxGridDBTableView
             Navigator.Buttons.CustomButtons = <>
             ScrollbarAnnotations.CustomAnnotations = <>
@@ -5837,8 +5756,6 @@
         StorePaintBuffer = False
         MouseWheelSupport = False
         BackgroundStyle = scsbsFormBackground
-        ExplicitWidth = 1173
-        ExplicitHeight = 564
         object Panel12: TPanel
           Left = 0
           Top = 625
@@ -5847,8 +5764,6 @@
           Align = alBottom
           BevelOuter = bvLowered
           TabOrder = 0
-          ExplicitTop = 523
-          ExplicitWidth = 1173
           object Button28: TButton
             AlignWithMargins = True
             Left = 1208
@@ -5865,7 +5780,6 @@
             Font.Style = []
             ParentFont = False
             TabOrder = 0
-            ExplicitLeft = 1024
           end
           object Button29: TButton
             AlignWithMargins = True
@@ -5884,7 +5798,6 @@
             ParentFont = False
             TabOrder = 1
             OnClick = Button29Click
-            ExplicitLeft = 904
           end
           object Button30: TButton
             AlignWithMargins = True
@@ -5912,8 +5825,6 @@
           Align = alClient
           BevelOuter = bvLowered
           TabOrder = 1
-          ExplicitWidth = 1173
-          ExplicitHeight = 523
           object Panel13: TPanel
             Left = 1
             Top = 1
@@ -5922,7 +5833,6 @@
             Align = alLeft
             BevelOuter = bvNone
             TabOrder = 0
-            ExplicitHeight = 521
             object GroupBox9: TGroupBox
               AlignWithMargins = True
               Left = 3
@@ -6080,7 +5990,6 @@
               object cxTabSheet5: TcxTabSheet
                 Caption = #1044#1086#1087#1086#1083#1085#1080#1090#1077#1083#1100#1085#1086
                 ImageIndex = 0
-                ExplicitHeight = 257
                 object Label36: TLabel
                   Left = 18
                   Top = 12
@@ -6219,7 +6128,6 @@
               object cxTabSheet6: TcxTabSheet
                 Caption = #1055#1072#1089#1087#1086#1088#1090
                 ImageIndex = 1
-                ExplicitHeight = 254
                 object Label33: TLabel
                   Left = 23
                   Top = 12
@@ -6360,7 +6268,6 @@
               object cxTabSheet7: TcxTabSheet
                 Caption = 'cxTabSheet7'
                 ImageIndex = 2
-                ExplicitHeight = 254
                 object Label47: TLabel
                   Left = 16
                   Top = 88
@@ -6393,7 +6300,6 @@
             Align = alClient
             BevelOuter = bvNone
             TabOrder = 1
-            ExplicitTop = 0
             object Label49: TLabel
               Left = 519
               Top = 63
@@ -6500,8 +6406,6 @@
                 Font.Style = []
                 ImageIndex = 0
                 ParentFont = False
-                ExplicitWidth = 865
-                ExplicitHeight = 237
                 object GroupBox13: TGroupBox
                   Left = 0
                   Top = 59
@@ -6510,8 +6414,6 @@
                   Align = alClient
                   Caption = ' '#1042#1088#1077#1076#1085#1099#1077' '#1092#1072#1082#1090#1086#1088#1099' '#1087#1072#1094#1080#1077#1085#1090#1072' '
                   TabOrder = 0
-                  ExplicitWidth = 865
-                  ExplicitHeight = 178
                   object cxGrid8: TcxGrid
                     Left = 2
                     Top = 21
@@ -6519,8 +6421,6 @@
                     Height = 232
                     Align = alClient
                     TabOrder = 0
-                    ExplicitWidth = 861
-                    ExplicitHeight = 155
                     object cxGrid1DBTableView1: TcxGridDBTableView
                       Navigator.Buttons.CustomButtons = <>
                       ScrollbarAnnotations.CustomAnnotations = <>
@@ -6572,7 +6472,6 @@
                   Height = 59
                   Align = alTop
                   TabOrder = 1
-                  ExplicitWidth = 865
                   object Label37: TLabel
                     Left = 3
                     Top = 3
@@ -6590,7 +6489,6 @@
                     Caption = #1044#1086#1073#1072#1074#1080#1090#1100
                     TabOrder = 0
                     OnClick = Button7Click
-                    ExplicitLeft = 762
                   end
                   object lkppFactor: TcxLookupComboBox
                     AlignWithMargins = True
@@ -6624,7 +6522,6 @@
                     Style.Font.Style = []
                     Style.IsFontAssigned = True
                     TabOrder = 1
-                    ExplicitWidth = 751
                     Width = 935
                   end
                 end
@@ -6632,8 +6529,6 @@
               object cxTabSheet2: TcxTabSheet
                 Caption = #1054#1073#1089#1083#1077#1076#1086#1074#1072#1085#1080#1103' '#1080' '#1088#1077#1079#1091#1083#1100#1090#1072#1090#1099
                 ImageIndex = 1
-                ExplicitWidth = 865
-                ExplicitHeight = 237
                 object GroupBox15: TGroupBox
                   Left = 0
                   Top = 0
@@ -6642,7 +6537,6 @@
                   Align = alTop
                   Caption = #1055#1077#1088#1077#1095#1077#1085#1100' '#1086#1073#1089#1083#1077#1076#1086#1074#1072#1085#1080#1081' '
                   TabOrder = 0
-                  ExplicitWidth = 865
                   object cxLookupComboBox6: TcxLookupComboBox
                     AlignWithMargins = True
                     Left = 5
@@ -6663,7 +6557,6 @@
                     Style.Font.Style = []
                     Style.IsFontAssigned = True
                     TabOrder = 0
-                    ExplicitWidth = 751
                     Width = 935
                   end
                   object Button26: TButton
@@ -6675,7 +6568,6 @@
                     Align = alRight
                     Caption = #1044#1086#1073#1072#1074#1080#1090#1100
                     TabOrder = 1
-                    ExplicitLeft = 762
                   end
                 end
                 object cxGrid9: TcxGrid
@@ -6686,7 +6578,6 @@
                   Height = 296
                   Align = alTop
                   TabOrder = 1
-                  ExplicitWidth = 990
                   object cxGridDBTableView1: TcxGridDBTableView
                     Navigator.Buttons.CustomButtons = <>
                     ScrollbarAnnotations.CustomAnnotations = <>
@@ -6703,8 +6594,6 @@
               object cxTabSheet3: TcxTabSheet
                 Caption = #1047#1072#1082#1083#1102#1095#1077#1085#1080#1077
                 ImageIndex = 2
-                ExplicitWidth = 865
-                ExplicitHeight = 237
                 object GroupBox16: TGroupBox
                   Left = 0
                   Top = 0
@@ -6713,7 +6602,6 @@
                   Align = alTop
                   Caption = ' '#1047#1072#1082#1083#1102#1095#1077#1085#1080#1077' '
                   TabOrder = 0
-                  ExplicitWidth = 865
                   object Label44: TLabel
                     Left = 16
                     Top = 32
@@ -6781,8 +6669,6 @@
                   Align = alClient
                   Caption = #1056#1077#1082#1086#1084#1077#1085#1076#1072#1094#1080#1080' '
                   TabOrder = 1
-                  ExplicitWidth = 865
-                  ExplicitHeight = 108
                   object cxGrid10: TcxGrid
                     AlignWithMargins = True
                     Left = 5
@@ -6791,8 +6677,6 @@
                     Height = 156
                     Align = alClient
                     TabOrder = 0
-                    ExplicitWidth = 855
-                    ExplicitHeight = 79
                     object cxGridDBTableView2: TcxGridDBTableView
                       Navigator.Buttons.CustomButtons = <>
                       ScrollbarAnnotations.CustomAnnotations = <>
@@ -6810,8 +6694,6 @@
               object cxTabSheet4: TcxTabSheet
                 Caption = #1060#1083#1102#1086#1088#1086#1075#1088#1072#1092#1080#1103
                 ImageIndex = 3
-                ExplicitWidth = 865
-                ExplicitHeight = 237
               end
             end
             object cxLookupComboBox5: TcxLookupComboBox
@@ -7140,10 +7022,9 @@
               Align = alLeft
               BevelOuter = bvNone
               TabOrder = 8
-              ExplicitTop = 4
               object Label45: TLabel
                 AlignWithMargins = True
-                Left = 3
+                Left = 6
                 Top = 5
                 Width = 68
                 Height = 24
@@ -12100,20 +11981,20 @@
           22307078222076696577426F783D2230203020333220333222207374796C653D
           22656E61626C652D6261636B67726F756E643A6E657720302030203332203332
           3B2220786D6C3A73706163653D227072657365727665223E262331333B262331
-          303B2623393B3C7374796C6520747970653D22746578742F6373732220786D6C
-          3A73706163653D227072657365727665223E2E426C61636B7B66696C6C3A2337
-          32373237323B7D262331333B262331303B2623393B2E426C75657B66696C6C3A
-          233131373744373B7D3C2F7374796C653E0D0A3C7061746820636C6173733D22
-          426C61636B2220643D224D362C32385634683134763563302C302E362C302E34
-          2C312C312C3168357632683256396C2D372D37483543342E342C322C342C322E
-          342C342C3376323663302C302E362C302E342C312C312C316837762D32222F3E
-          0D0A3C7061746820636C6173733D22426C61636B2220643D224D31382C32384C
-          31382C32384C31382C3238222F3E0D0A3C7061746820636C6173733D22426C75
-          652220643D224D32372C32316C2D382C386C2D342D346C382D384C32372C3231
-          7A204D32382C32306C312E372D312E3763302E342D302E342C302E342D312C30
-          2D312E334C32372C31342E33632D302E342D302E342D312D302E342D312E332C
-          304C32342C31364C32382C32307A20202623393B204D31342C3236763468344C
-          31342C32367A222F3E0D0A3C2F7376673E0D0A}
+          303B3C7374796C6520747970653D22746578742F6373732220786D6C3A737061
+          63653D227072657365727665223E2E426C61636B7B66696C6C3A233732373237
+          323B7D262331333B262331303B2623393B2E426C75657B66696C6C3A23313137
+          3744373B7D3C2F7374796C653E0D0A3C7061746820636C6173733D22426C6163
+          6B2220643D224D362C32385634683134763563302C302E362C302E342C312C31
+          2C3168357632683256396C2D372D37483543342E342C322C342C322E342C342C
+          3376323663302C302E362C302E342C312C312C316837762D32222F3E0D0A3C70
+          61746820636C6173733D22426C61636B2220643D224D31382C32384C31382C32
+          384C31382C3238222F3E0D0A3C7061746820636C6173733D22426C7565222064
+          3D224D32372C32316C2D382C386C2D342D346C382D384C32372C32317A204D32
+          382C32306C312E372D312E3763302E342D302E342C302E342D312C302D312E33
+          4C32372C31342E33632D302E342D302E342D312D302E342D312E332C304C3234
+          2C31364C32382C32307A20202623393B204D31342C3236763468344C31342C32
+          367A222F3E0D0A3C2F7376673E0D0A}
       end
       item
         ImageClass = 'TdxSmartImage'
@@ -12126,16 +12007,16 @@
           782220793D22307078222076696577426F783D22302030203332203332222073
           74796C653D22656E61626C652D6261636B67726F756E643A6E65772030203020
           33322033323B2220786D6C3A73706163653D227072657365727665223E262331
-          333B262331303B2623393B3C7374796C6520747970653D22746578742F637373
-          2220786D6C3A73706163653D227072657365727665223E2E59656C6C6F777B66
-          696C6C3A234646423131353B7D262331333B262331303B2623393B2E5265647B
-          66696C6C3A234431314331433B7D3C2F7374796C653E0D0A3C706F6C79676F6E
-          20636C6173733D2259656C6C6F772220706F696E74733D22342C322032382C32
-          2032382C362031382C31362031382C32362031342C33302031342C313620342C
-          3620222F3E0D0A3C706F6C79676F6E20636C6173733D225265642220706F696E
-          74733D2233322C32302033302C31382032362C32322032322C31382032302C32
-          302032342C32342032302C32382032322C33302032362C32362033302C333020
-          33322C32382032382C323420222F3E0D0A3C2F7376673E0D0A}
+          333B262331303B3C7374796C6520747970653D22746578742F6373732220786D
+          6C3A73706163653D227072657365727665223E2E59656C6C6F777B66696C6C3A
+          234646423131353B7D262331333B262331303B2623393B2E5265647B66696C6C
+          3A234431314331433B7D3C2F7374796C653E0D0A3C706F6C79676F6E20636C61
+          73733D2259656C6C6F772220706F696E74733D22342C322032382C322032382C
+          362031382C31362031382C32362031342C33302031342C313620342C3620222F
+          3E0D0A3C706F6C79676F6E20636C6173733D225265642220706F696E74733D22
+          33322C32302033302C31382032362C32322032322C31382032302C3230203234
+          2C32342032302C32382032322C33302032362C32362033302C33302033322C32
+          382032382C323420222F3E0D0A3C2F7376673E0D0A}
       end
       item
         ImageClass = 'TdxPNGImage'
@@ -12166,18 +12047,18 @@
           22307078222076696577426F783D2230203020333220333222207374796C653D
           22656E61626C652D6261636B67726F756E643A6E657720302030203332203332
           3B2220786D6C3A73706163653D227072657365727665223E262331333B262331
-          303B2623393B3C7374796C6520747970653D22746578742F6373732220786D6C
-          3A73706163653D227072657365727665223E2E426C61636B7B66696C6C3A2337
-          32373237323B7D262331333B262331303B2623393B2E477265656E7B66696C6C
-          3A233033394332333B7D3C2F7374796C653E0D0A3C7061746820636C6173733D
-          22426C61636B2220643D224D31342C3648367638683856367A204D31302C3132
-          4838563868325631327A222F3E0D0A3C7061746820636C6173733D22426C6163
-          6B2220643D224D32302C3134763248345636483143302E342C362C302C362E34
-          2C302C3776323263302C302E362C302E342C312C312C3168323263302E362C30
-          2C312D302E342C312D315631364C32302C31347A204D32302C32364834762D36
-          6831365632367A222F3E0D0A3C706F6C79676F6E20636C6173733D2247726565
-          6E2220706F696E74733D2233322C362032342C362032342C322031362C382032
-          342C31342032342C31302033322C313020222F3E0D0A3C2F7376673E0D0A}
+          303B3C7374796C6520747970653D22746578742F6373732220786D6C3A737061
+          63653D227072657365727665223E2E426C61636B7B66696C6C3A233732373237
+          323B7D262331333B262331303B2623393B2E477265656E7B66696C6C3A233033
+          394332333B7D3C2F7374796C653E0D0A3C7061746820636C6173733D22426C61
+          636B2220643D224D31342C3648367638683856367A204D31302C313248385638
+          68325631327A222F3E0D0A3C7061746820636C6173733D22426C61636B222064
+          3D224D32302C3134763248345636483143302E342C362C302C362E342C302C37
+          76323263302C302E362C302E342C312C312C3168323263302E362C302C312D30
+          2E342C312D315631364C32302C31347A204D32302C32364834762D3668313656
+          32367A222F3E0D0A3C706F6C79676F6E20636C6173733D22477265656E222070
+          6F696E74733D2233322C362032342C362032342C322031362C382032342C3134
+          2032342C31302033322C313020222F3E0D0A3C2F7376673E0D0A}
       end
       item
         ImageClass = 'TdxPNGImage'
@@ -12274,29 +12155,29 @@
           22307078222076696577426F783D2230203020333220333222207374796C653D
           22656E61626C652D6261636B67726F756E643A6E657720302030203332203332
           3B2220786D6C3A73706163653D227072657365727665223E262331333B262331
-          303B2623393B3C7374796C6520747970653D22746578742F6373732220786D6C
-          3A73706163653D227072657365727665223E2E426C61636B7B66696C6C3A2337
-          32373237323B7D262331333B262331303B2623393B2E5265647B66696C6C3A23
-          4431314331433B7D3C2F7374796C653E0D0A3C7061746820636C6173733D2242
-          6C61636B2220643D224D382C31365636483543342E342C362C342C362E342C34
-          2C3776323263302C302E362C302E342C312C312C3168323263302E362C302C31
-          2D302E342C312D3156313648387A204D382C3236762D36683136763648387A22
-          2F3E0D0A3C7061746820636C6173733D22426C61636B2220643D224D31382C36
-          682D387638683856367A204D31342C3132682D32563868325631327A222F3E0D
-          0A3C7061746820636C6173733D225265642220643D224D33312C32483231632D
-          302E352C302D312C302E352D312C3176313063302C302E352C302E352C312C31
-          2C3168313063302E352C302C312D302E352C312D3156334333322C322E352C33
-          312E352C322C33312C327A204D32392E382C31302E3520202623393B63302E32
-          2C302E322C302E322C302E352C302C302E376C2D302E372C302E37632D302E32
-          2C302E322D302E352C302E322D302E372C304C32362C392E346C2D322E352C32
-          2E35632D302E322C302E322D302E352C302E322D302E372C306C2D302E372D30
-          2E37632D302E322D302E322D302E322D302E352C302D302E3720202623393B4C
-          32342E362C386C2D322E342D322E354332322C352E332C32322C352C32322E32
-          2C342E386C302E372D302E374332332C342C32332E332C342C32332E352C342E
-          314C32362C362E366C322E352D322E354332382E372C342C32392C342C32392E
-          322C342E316C302E372C302E3720202623393B4333302C352C33302C352E332C
-          32392E382C352E354C32372E342C384C32392E382C31302E357A222F3E0D0A3C
-          2F7376673E0D0A}
+          303B3C7374796C6520747970653D22746578742F6373732220786D6C3A737061
+          63653D227072657365727665223E2E426C61636B7B66696C6C3A233732373237
+          323B7D262331333B262331303B2623393B2E5265647B66696C6C3A2344313143
+          31433B7D3C2F7374796C653E0D0A3C7061746820636C6173733D22426C61636B
+          2220643D224D382C31365636483543342E342C362C342C362E342C342C377632
+          3263302C302E362C302E342C312C312C3168323263302E362C302C312D302E34
+          2C312D3156313648387A204D382C3236762D36683136763648387A222F3E0D0A
+          3C7061746820636C6173733D22426C61636B2220643D224D31382C36682D3876
+          38683856367A204D31342C3132682D32563868325631327A222F3E0D0A3C7061
+          746820636C6173733D225265642220643D224D33312C32483231632D302E352C
+          302D312C302E352D312C3176313063302C302E352C302E352C312C312C316831
+          3063302E352C302C312D302E352C312D3156334333322C322E352C33312E352C
+          322C33312C327A204D32392E382C31302E3520202623393B63302E322C302E32
+          2C302E322C302E352C302C302E376C2D302E372C302E37632D302E322C302E32
+          2D302E352C302E322D302E372C304C32362C392E346C2D322E352C322E35632D
+          302E322C302E322D302E352C302E322D302E372C306C2D302E372D302E37632D
+          302E322D302E322D302E322D302E352C302D302E3720202623393B4C32342E36
+          2C386C2D322E342D322E354332322C352E332C32322C352C32322E322C342E38
+          6C302E372D302E374332332C342C32332E332C342C32332E352C342E314C3236
+          2C362E366C322E352D322E354332382E372C342C32392C342C32392E322C342E
+          316C302E372C302E3720202623393B4333302C352C33302C352E332C32392E38
+          2C352E354C32372E342C384C32392E382C31302E357A222F3E0D0A3C2F737667
+          3E0D0A}
       end
       item
         ImageClass = 'TdxPNGImage'
