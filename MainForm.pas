@@ -422,8 +422,8 @@ type
     LCBCitizenship: TcxLookupComboBox;
     cxGrid7DBTableView1nameList: TcxGridDBColumn;
     cxGrid7DBTableView1typeOsmotr: TcxGridDBColumn;
-    DBGrid1: TDBGrid;
     cxGrid7DBTableView1img: TcxGridDBColumn;
+    DBGrid1: TDBGrid;
 
                 procedure CloseButtonClick(Sender: TObject);
                 procedure MinButtonClick(Sender: TObject);
@@ -512,6 +512,7 @@ type
                 procedure Button29Click(Sender: TObject);
                 procedure scGPButton5Click(Sender: TObject);
                 procedure UpdateInfoLCBEmployee;
+    procedure LCBTypeOsmotrPropertiesChange(Sender: TObject);
                 // procedure cxGrid7DBTableView1DataControllerDataChanged(Sender: TObject);
 
         private
@@ -573,6 +574,18 @@ end;
 procedure TForm1.btnCloseClick(Sender: TObject);
 begin
         scPageViewer1.PageIndex := 0;
+end;
+
+procedure TForm1.LCBTypeOsmotrPropertiesChange(Sender: TObject);
+begin
+//   with DModule.MDTalonEmployee do begin
+//        edit;
+//        FieldByName('idTypeOsmotr').Value:= LCBTypeOsmotr.EditValue;
+//        post;
+//   end;
+
+//   UpdateInfoLCBEmployee;
+//   scDBImage1.Update;
 end;
 
 procedure TForm1.LoadFile(ImportFile: TdxMemData; idList: Integer);
@@ -1282,23 +1295,27 @@ end;
 procedure   TForm1.UpdateInfoLCBEmployee;
 var id:integer;
 begin
-         id:= DModule.MDTalonEmployee.FieldByName('idOrganization').AsInteger;
-         LCBOrganization.ItemIndex:= LCBOrganization.Properties.DataController.FindRecordIndexByKey( id );
+         with DModule.MDTalonEmployee do begin
 
-         id:= DModule.MDTalonEmployee.FieldByName('idProfession').AsInteger;
-         LCBProffesion.ItemIndex:= LCBProffesion.Properties.DataController.FindRecordIndexByKey( id );
+               id:= FieldByName('idOrganization').AsInteger;
+               LCBOrganization.ItemIndex:= LCBOrganization.Properties.DataController.FindRecordIndexByKey( id );
 
-         id:= DModule.MDTalonEmployee.FieldByName('idDepartment').AsInteger;
-         LCBDepartment.ItemIndex:= LCBDepartment.Properties.DataController.FindRecordIndexByKey( id );
+               id:= FieldByName('idProfession').AsInteger;
+               LCBProffesion.ItemIndex:= LCBProffesion.Properties.DataController.FindRecordIndexByKey( id );
 
-         id:= DModule.MDTalonEmployee.FieldByName('idTypeOsmotr').AsInteger;
-         LCBTypeOsmotr.ItemIndex:= LCBTypeOsmotr.Properties.DataController.FindRecordIndexByKey( id );
+               id:= FieldByName('idDepartment').AsInteger;
+               LCBDepartment.ItemIndex:= LCBDepartment.Properties.DataController.FindRecordIndexByKey( id );
 
-         id:= DModule.MDTalonEmployee.FieldByName('idCitizenship').AsInteger;
-         LCBCitizenship.ItemIndex:= LCBCitizenship.Properties.DataController.FindRecordIndexByKey( id );
+               id:= FieldByName('idTypeOsmotr').AsInteger;
+               LCBTypeOsmotr.ItemIndex:= LCBTypeOsmotr.Properties.DataController.FindRecordIndexByKey( id );
+
+               id:= FieldByName('idCitizenship').AsInteger;
+               LCBCitizenship.ItemIndex:= LCBCitizenship.Properties.DataController.FindRecordIndexByKey( id );
 
 
-         LCBSubDeparment.ItemIndex:= LCBSubDeparment.Properties.DataController.FindRecordIndexByKey('2');
+               LCBSubDeparment.ItemIndex:= LCBSubDeparment.Properties.DataController.FindRecordIndexByKey('2');
+         end;
+
 end;
 
 

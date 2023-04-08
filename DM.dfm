@@ -840,14 +840,13 @@
     Top = 310
   end
   object dsTalonEmployee: TDataSource
-    DataSet = MDTalonEmployee
+    DataSet = qryTalonEmployee
     Left = 276
     Top = 992
   end
   object qryTalonEmployee: TADOQuery
     Connection = ADOConnection1
     CursorType = ctStatic
-    AfterScroll = qryTalonEmployeeAfterScroll
     Parameters = <
       item
         Name = 'idEmployee'
@@ -945,10 +944,11 @@
     Top = 992
   end
   object MDTalonEmployee: TdxMemData
+    Active = True
     Indexes = <>
     SortOptions = []
     AfterScroll = MDTalonEmployeeAfterScroll
-    Left = 84
+    Left = 92
     Top = 910
     object StringField40: TStringField
       FieldName = 'numCard'
@@ -1073,8 +1073,8 @@
   end
   object dsCitizenship: TDataSource
     DataSet = qryCitizenship
-    Left = 882
-    Top = 978
+    Left = 1314
+    Top = 554
   end
   object qryCitizenship: TADOQuery
     Active = True
@@ -1086,7 +1086,27 @@
       'SELECT [idCitizenship]'
       '      ,[nameCitizenship]'
       '  FROM [GKB6Profosmotr].[dbo].[sprCitizenship]')
-    Left = 882
-    Top = 908
+    Left = 1314
+    Top = 484
+  end
+  object dsTalonOsmotr: TDataSource
+    DataSet = qryTalonOsmotr
+    Left = 658
+    Top = 986
+  end
+  object qryTalonOsmotr: TADOQuery
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    Prepared = True
+    SQL.Strings = (
+      'SELECT  [idTypeOsmotr]'
+      '      ,[nameOsmotr]'
+      '      ,[image]'
+      '      ,[idOsmotr]'
+      '  FROM [GKB6Profosmotr].[dbo].[sprTypeOsmotr]')
+    Left = 658
+    Top = 916
   end
 end

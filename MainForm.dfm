@@ -7015,6 +7015,7 @@
                 2C322E342C302C337A204D33302C3238483256366832385632387A204D32362C
                 31340D0A0909483136762D326831305631347A204D32362C3232483136762D32
                 6831305632327A222F3E0D0A3C2F673E0D0A3C2F7376673E0D0A}
+              Properties.DropDownListStyle = lsFixedList
               Properties.DropDownSizeable = True
               Properties.GridMode = True
               Properties.KeyFieldNames = 'idOsmotr'
@@ -7024,6 +7025,7 @@
                 end>
               Properties.ListOptions.ShowHeader = False
               Properties.ListSource = DModule.dsTypeOsmotr
+              Properties.OnChange = LCBTypeOsmotrPropertiesChange
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
               Style.Font.Height = -16
@@ -7101,18 +7103,22 @@
                 object cxGrid7DBTableView1: TcxGridDBTableView
                   Navigator.Buttons.CustomButtons = <>
                   ScrollbarAnnotations.CustomAnnotations = <>
-                  DataController.DataSource = DModule.dsTalonEmployee
+                  DataController.DataSource = DModule.dsMDTalonEmployee
                   DataController.Summary.DefaultGroupSummaryItems = <>
                   DataController.Summary.FooterSummaryItems = <>
                   DataController.Summary.SummaryGroups = <>
                   OptionsData.CancelOnExit = False
                   OptionsData.Deleting = False
                   OptionsData.DeletingConfirmation = False
+                  OptionsData.Editing = False
                   OptionsData.Inserting = False
+                  OptionsSelection.CellSelect = False
+                  OptionsSelection.InvertSelect = False
                   OptionsView.CellAutoHeight = True
                   OptionsView.ColumnAutoWidth = True
                   OptionsView.GroupByBox = False
                   OptionsView.HeaderAutoHeight = True
+                  Styles.Content = cxStyle1
                   object cxGrid7DBTableView1dateTalon: TcxGridDBColumn
                     Caption = #1044#1072#1090#1072
                     DataBinding.FieldName = 'dateTalon'
@@ -7122,10 +7128,10 @@
                   object cxGrid7DBTableView1img: TcxGridDBColumn
                     DataBinding.FieldName = 'img'
                     PropertiesClassName = 'TcxImageProperties'
-                    Properties.FitMode = ifmNormal
+                    Properties.FitMode = ifmStretch
                     Properties.GraphicClassName = 'TdxPNGImage'
                     Options.AutoWidthSizable = False
-                    Width = 45
+                    Width = 30
                     IsCaptionAssigned = True
                   end
                   object cxGrid7DBTableView1typeOsmotr: TcxGridDBColumn
@@ -7167,10 +7173,10 @@
     end
   end
   object DBGrid1: TDBGrid
-    Left = 20
-    Top = 616
-    Width = 1321
-    Height = 141
+    Left = 61
+    Top = 640
+    Width = 1232
+    Height = 120
     DataSource = DModule.dsMDTalonEmployee
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET

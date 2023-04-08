@@ -172,7 +172,8 @@ type
     qryCitizenship: TADOQuery;
     MDTalonEmployeenameList: TStringField;
     MDTalonEmployeetypeOsmotr: TStringField;
-    procedure qryTalonEmployeeAfterScroll(DataSet: TDataSet);
+    dsTalonOsmotr: TDataSource;
+    qryTalonOsmotr: TADOQuery;
     procedure MDTalonEmployeeAfterScroll(DataSet: TDataSet);
   private
     { Private declarations }
@@ -220,12 +221,6 @@ end;
 procedure TDModule.MDTalonEmployeeAfterScroll(DataSet: TDataSet);
 begin
  Form1.UpdateInfoLCBEmployee;
-end;
-
-procedure TDModule.qryTalonEmployeeAfterScroll(DataSet: TDataSet);
-var s:integer;
-begin
-    s:=1;
 end;
 
 end.
