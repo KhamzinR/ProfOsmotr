@@ -47,7 +47,8 @@ uses
         scDBControls,
         dxSkinBasic, dxSkiniMaginary, dxSkinOffice2019Black,
         dxSkinOffice2019Colorful,
-        dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxScrollbarAnnotations;
+        dxSkinOffice2019DarkGray, dxSkinOffice2019White, dxScrollbarAnnotations,
+  Vcl.Grids, Vcl.DBGrids;
 
 type
         TForm1 = class(TForm)
@@ -363,7 +364,6 @@ type
                 Button7: TButton;
                 cxImageListIconOsmotr: TcxImageList;
                 Image1: TImage;
-                cxDBTextEdit6: TcxDBTextEdit;
                 Label47: TLabel;
                 cxGrid8: TcxGrid;
                 cxGrid1DBTableView1: TcxGridDBTableView;
@@ -397,15 +397,15 @@ type
                 cxGrid5DBTableView1idEmployee: TcxGridDBColumn;
                 cxGrid5DBTableView1idTalon: TcxGridDBColumn;
                 Label49: TLabel;
-                cxLookupComboBox5: TcxLookupComboBox;
+    LCBOrganization: TcxLookupComboBox;
                 Label54: TLabel;
-                cxLookupComboBox11: TcxLookupComboBox;
+    LCBProffesion: TcxLookupComboBox;
                 Label55: TLabel;
-                cxLookupComboBox12: TcxLookupComboBox;
+    LCBDepartment: TcxLookupComboBox;
                 Label58: TLabel;
-                cxLookupComboBox13: TcxLookupComboBox;
+    LCBSubDeparment: TcxLookupComboBox;
                 scDBImage1: TscDBImage;
-                cxLookupComboBox10: TcxLookupComboBox;
+    LCBTypeOsmotr: TcxLookupComboBox;
                 Label53: TLabel;
                 Label48: TLabel;
                 cxDBTextEdit10: TcxDBTextEdit;
@@ -417,7 +417,13 @@ type
                 Label56: TLabel;
                 cxDBDateEdit3: TcxDBDateEdit;
                 Label46: TLabel;
-                cxDBComboBox2: TcxDBComboBox;
+    cxGrid7DBTableView1dateTalon: TcxGridDBColumn;
+    cxDBMemo3: TcxDBMemo;
+    LCBCitizenship: TcxLookupComboBox;
+    cxGrid7DBTableView1nameList: TcxGridDBColumn;
+    cxGrid7DBTableView1typeOsmotr: TcxGridDBColumn;
+    DBGrid1: TDBGrid;
+    cxGrid7DBTableView1img: TcxGridDBColumn;
 
                 procedure CloseButtonClick(Sender: TObject);
                 procedure MinButtonClick(Sender: TObject);
@@ -505,7 +511,7 @@ type
                 procedure Button7Click(Sender: TObject);
                 procedure Button29Click(Sender: TObject);
                 procedure scGPButton5Click(Sender: TObject);
-
+                procedure UpdateInfoLCBEmployee;
                 // procedure cxGrid7DBTableView1DataControllerDataChanged(Sender: TObject);
 
         private
@@ -1199,36 +1205,33 @@ var
         AColumn: TcxCustomGridTableItem;
         AColumn2: TcxCustomGridTableItem;
         idEmployee, idTalon: Integer;
-
+        i, id:integer;
+        strFieldName: string;
 begin
 
-        AColumn := TcxGridDBTableView(Sender).GetColumnByFieldName
-          ('idEmployee');
+        AColumn := TcxGridDBTableView(Sender).GetColumnByFieldName('idEmployee');         //Работник
         idEmployee := ACellViewInfo.GridRecord.Values[AColumn.Index];
 
-        AColumn2 := TcxGridDBTableView(Sender).GetColumnByFieldName('idTalon');
+        AColumn2 := TcxGridDBTableView(Sender).GetColumnByFieldName('idTalon');            //Номер талона
         idTalon := ACellViewInfo.GridRecord.Values[AColumn2.Index];
 
         if (AColumn <> nil) and (ACellViewInfo.GridRecord is TcxGridDataRow)
         then
-                with DModule.qryTalonEmployee do
-                begin
+                with DModule.qryTalonEmployee do  begin                                    // Запрос инфромации по талону
                         Close;
-                        Parameters.ParamByName('idEmployee').Value :=
-                          idEmployee;
+                        Parameters.ParamByName('idEmployee').Value := idEmployee;
                         Open;
                 end;
 
-        with DModule do
-        begin
+
+        // Загрузка вредных факторов
+        with DModule do begin
                 dxMemDataFactor.Close;
                 dxMemDataFactor.Open;
 
                 qCommon.SQL.Clear;
-                qCommon.SQL.Add
-                  ('SELECT DF.ppFactor,DF.descFactor FROM linkTalonDangerFactor lTDF');
-                qCommon.SQL.Add
-                  (' LEFT JOIN sprDangerousFactors DF ON DF.idFactor = lTDF.idDangerFactor');
+                qCommon.SQL.Add ('SELECT DF.ppFactor,DF.descFactor FROM linkTalonDangerFactor lTDF');
+                qCommon.SQL.Add (' LEFT JOIN sprDangerousFactors DF ON DF.idFactor = lTDF.idDangerFactor');
                 qCommon.SQL.Add('WHERE idTalon = :idTalon');
                 qCommon.SQL.Add('      and idEmployee = :idEmployee');
                 qCommon.Parameters.ParamByName('idTalon').Value := idTalon;
@@ -1238,18 +1241,66 @@ begin
                 while not qCommon.Eof do
                 begin
                         dxMemDataFactor.Append;
-                        dxMemDataFactor.FieldByName('ppFactor').Value :=
-                          qCommon.Fields[0].Value;
-                        dxMemDataFactor.FieldByName('descFactor').Value :=
-                          qCommon.Fields[1].Value;
+                        dxMemDataFactor.FieldByName('ppFactor').Value := qCommon.Fields[0].Value;
+                        dxMemDataFactor.FieldByName('descFactor').Value := qCommon.Fields[1].Value;
                         dxMemDataFactor.Post;
                         qCommon.Next;
                 end;
 
         end;
 
+        // Загрузка во временное хранилище основной информации по талону
+           with DModule do begin
+                MDTalonEmployee.Close;
+                MDTalonEmployee.Open;
+
+                while not qryTalonEmployee.Eof do
+                begin
+                        MDTalonEmployee.Append;
+                        for I := 0 to MDTalonEmployee.FieldCount-1 do begin
+
+                           strFieldName := MDTalonEmployee.Fields[i].FieldName;
+
+                           if qryTalonEmployee.Fields.FindField( strFieldName ) <> nil then
+                              MDTalonEmployee.FieldByName(strFieldName).Value := qryTalonEmployee.FieldByName(strFieldName).Value;
+
+                         end;
+
+                        MDTalonEmployee.Post ;
+                        qryTalonEmployee.Next;
+
+                end;
+           end;
+
+
+
+
+
         scPageViewer1.PageIndex := 7;
 end;
+
+procedure   TForm1.UpdateInfoLCBEmployee;
+var id:integer;
+begin
+         id:= DModule.MDTalonEmployee.FieldByName('idOrganization').AsInteger;
+         LCBOrganization.ItemIndex:= LCBOrganization.Properties.DataController.FindRecordIndexByKey( id );
+
+         id:= DModule.MDTalonEmployee.FieldByName('idProfession').AsInteger;
+         LCBProffesion.ItemIndex:= LCBProffesion.Properties.DataController.FindRecordIndexByKey( id );
+
+         id:= DModule.MDTalonEmployee.FieldByName('idDepartment').AsInteger;
+         LCBDepartment.ItemIndex:= LCBDepartment.Properties.DataController.FindRecordIndexByKey( id );
+
+         id:= DModule.MDTalonEmployee.FieldByName('idTypeOsmotr').AsInteger;
+         LCBTypeOsmotr.ItemIndex:= LCBTypeOsmotr.Properties.DataController.FindRecordIndexByKey( id );
+
+         id:= DModule.MDTalonEmployee.FieldByName('idCitizenship').AsInteger;
+         LCBCitizenship.ItemIndex:= LCBCitizenship.Properties.DataController.FindRecordIndexByKey( id );
+
+
+         LCBSubDeparment.ItemIndex:= LCBSubDeparment.Properties.DataController.FindRecordIndexByKey('2');
+end;
+
 
 procedure TForm1.cxGrid6DBTableView1CustomDrawCell
   (Sender: TcxCustomGridTableView; ACanvas: TcxCanvas;

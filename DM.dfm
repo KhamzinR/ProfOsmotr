@@ -1,5 +1,5 @@
 ﻿object DModule: TDModule
-  Height = 871
+  Height = 1137
   Width = 1499
   PixelsPerInch = 120
   object ADOConnection1: TADOConnection
@@ -486,8 +486,8 @@
   end
   object dsTalons: TDataSource
     DataSet = qTalons
-    Left = 400
-    Top = 750
+    Left = 472
+    Top = 998
   end
   object qTalons: TADOQuery
     Connection = ADOConnection1
@@ -540,8 +540,8 @@
         '  left join [dbo].[sprDepartment] d on d.idDepartment = l.idDepa' +
         'rtment'
       'WHERE l.idListEmployeeOrg = :idListEmployeeOrg')
-    Left = 400
-    Top = 670
+    Left = 472
+    Top = 918
   end
   object mdImportExcelFile: TdxMemData
     Indexes = <>
@@ -840,14 +840,14 @@
     Top = 310
   end
   object dsTalonEmployee: TDataSource
-    DataSet = qryTalonEmployee
-    Left = 92
-    Top = 536
+    DataSet = MDTalonEmployee
+    Left = 276
+    Top = 992
   end
   object qryTalonEmployee: TADOQuery
-    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
+    AfterScroll = qryTalonEmployeeAfterScroll
     Parameters = <
       item
         Name = 'idEmployee'
@@ -860,18 +860,7 @@
     Prepared = True
     SQL.Strings = (
       '/****** '#1057#1082#1088#1080#1087#1090' '#1076#1083#1103' '#1082#1086#1084#1072#1085#1076#1099' SelectTopNRows '#1080#1079' '#1089#1088#1077#1076#1099' SSMS  ******/'
-      'SELECT [idTalon]'
-      '      ,[idListEmployeeOrg]'
-      '      ,lT.[idOrganization]'
-      '      ,lT.[idEmployee]'
-      '      ,lT.[idProfession]'
-      '      ,lT.[idDepartment]'
-      '      ,[dateTalon]'
-      '      ,lT.[numCard]'
-      '      ,[dateBegin]'
-      '      ,[dateEnd]'
-      '      ,[numPolis]'
-      #9'  ,[idTypeOcmotr]'
+      'SELECT LT.*'
       '      ,lT.[status] statusTalon2'
       #9'  , dbo.FIO(CE.idEmployee,0) FIO'
       #9'  , CE.name'
@@ -882,7 +871,7 @@
       #9'  , CE.numCard'
       #9'  , CE.inn'
       #9'  , CE.snils'
-      #9'  , CE.citizenship'
+      #9'  , CE.idCitizenship'
       #9'  , CE.comment'
       
         #9'  , case when CE.gender = 1 then '#39#1052#1091#1078#1089#1082#1086#1081#39' ELSE '#39#1046#1077#1085#1089#1082#1080#1081#39' end s' +
@@ -897,7 +886,11 @@
       #9'  ,tyO.[nameOsmotr] typeOsmotr'
       '                  ,tyO.[image] img'
       #9'  , IT2.[nameRow] statusTalon'
-      #9'  '
+      #9'   , CE.passportCode'
+      #9'  , CE.passportDate'
+      #9'  , CE.passportNumber'
+      #9'  , CE.passportOrgan'
+      #9'  , CE.passportSeries'
       '  FROM [GKB6Profosmotr].[dbo].[listTalons] LT'
       
         #9'left join [dbo].[sprCatalogEmployees] CE on CE.idEmployee = lT.' +
@@ -919,13 +912,13 @@
         '2.[valueRow] = lT.[status]'
       
         '                left join [sprTypeOsmotr] tyO on tyO.[idOsmotr] ' +
-        '= LT.[idTypeOcmotr]'
+        '= LT.[idTypeOsmotr]'
       'WHERE lT.idEmployee = :idEmployee '
       'ORDER BY [dateTalon]'
       ''
       '')
-    Left = 92
-    Top = 466
+    Left = 276
+    Top = 914
   end
   object qryTypeOsmotr: TADOQuery
     Active = True
@@ -949,14 +942,14 @@
   object dsMDTalonEmployee: TDataSource
     DataSet = MDTalonEmployee
     Left = 88
-    Top = 352
+    Top = 992
   end
   object MDTalonEmployee: TdxMemData
-    Active = True
     Indexes = <>
     SortOptions = []
+    AfterScroll = MDTalonEmployeeAfterScroll
     Left = 84
-    Top = 270
+    Top = 910
     object StringField40: TStringField
       FieldName = 'numCard'
     end
@@ -1006,7 +999,7 @@
       Size = 150
     end
     object StringField33: TStringField
-      FieldName = 'PassportKod'
+      FieldName = 'PassportCode'
       Size = 6
     end
     object StringField34: TStringField
@@ -1030,7 +1023,7 @@
       Size = 100
     end
     object StringField39: TStringField
-      FieldName = 'Polis'
+      FieldName = 'numPolis'
       Size = 12
     end
     object MDTalonEmployeetelefon: TStringField
@@ -1053,7 +1046,7 @@
       FieldName = 'idDepartment'
     end
     object MDTalonEmployeeidProffesion: TIntegerField
-      FieldName = 'idProffesion'
+      FieldName = 'idProfession'
     end
     object MDTalonEmployeeidCitizenship: TIntegerField
       FieldName = 'idCitizenship'
@@ -1062,5 +1055,38 @@
       FieldName = 'snils'
       Size = 12
     end
+    object MDTalonEmployeedateTalon: TDateField
+      FieldName = 'dateTalon'
+    end
+    object MDTalonEmployeeimg: TGraphicField
+      FieldName = 'img'
+      BlobType = ftGraphic
+    end
+    object MDTalonEmployeenameList: TStringField
+      FieldName = 'nameList'
+      Size = 150
+    end
+    object MDTalonEmployeetypeOsmotr: TStringField
+      FieldName = 'typeOsmotr'
+      Size = 50
+    end
+  end
+  object dsCitizenship: TDataSource
+    DataSet = qryCitizenship
+    Left = 882
+    Top = 978
+  end
+  object qryCitizenship: TADOQuery
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    Prepared = True
+    SQL.Strings = (
+      'SELECT [idCitizenship]'
+      '      ,[nameCitizenship]'
+      '  FROM [GKB6Profosmotr].[dbo].[sprCitizenship]')
+    Left = 882
+    Top = 908
   end
 end

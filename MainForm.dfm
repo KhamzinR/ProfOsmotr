@@ -5931,6 +5931,7 @@
                 Top = 189
                 DataBinding.DataField = 'dateBirth'
                 DataBinding.DataSource = DModule.dsMDTalonEmployee
+                Style.Color = clInfoBk
                 TabOrder = 0
                 Width = 121
               end
@@ -5939,6 +5940,7 @@
                 Top = 27
                 DataBinding.DataField = 'numCard'
                 DataBinding.DataSource = DModule.dsMDTalonEmployee
+                Style.Color = 15198183
                 TabOrder = 1
                 Width = 178
               end
@@ -5947,6 +5949,7 @@
                 Top = 60
                 DataBinding.DataField = 'family'
                 DataBinding.DataSource = DModule.dsMDTalonEmployee
+                Style.Color = 15269840
                 TabOrder = 2
                 Width = 178
               end
@@ -5955,6 +5958,7 @@
                 Top = 93
                 DataBinding.DataField = 'name'
                 DataBinding.DataSource = DModule.dsMDTalonEmployee
+                Style.Color = 15269840
                 TabOrder = 3
                 Width = 182
               end
@@ -5963,6 +5967,7 @@
                 Top = 126
                 DataBinding.DataField = 'otch'
                 DataBinding.DataSource = DModule.dsMDTalonEmployee
+                Style.Color = 15269840
                 TabOrder = 4
                 Width = 178
               end
@@ -5971,6 +5976,7 @@
                 Top = 156
                 DataBinding.DataField = 'Sex'
                 DataBinding.DataSource = DModule.dsMDTalonEmployee
+                Style.Color = clInfoBk
                 TabOrder = 5
                 Width = 178
               end
@@ -6116,13 +6122,24 @@
                   Height = 69
                   Width = 259
                 end
-                object cxDBComboBox2: TcxDBComboBox
-                  Left = 22
+                object LCBCitizenship: TcxLookupComboBox
+                  Left = 18
                   Top = 248
-                  DataBinding.DataField = 'idCitizenship'
-                  DataBinding.DataSource = DModule.dsMDTalonEmployee
+                  ParentFont = False
+                  Properties.KeyFieldNames = 'idCitizenship'
+                  Properties.ListColumns = <
+                    item
+                      FieldName = 'nameCitizenship'
+                    end>
+                  Properties.ListSource = DModule.dsCitizenship
+                  Style.Font.Charset = DEFAULT_CHARSET
+                  Style.Font.Color = clWindowText
+                  Style.Font.Height = -17
+                  Style.Font.Name = 'Tahoma'
+                  Style.Font.Style = []
+                  Style.IsFontAssigned = True
                   TabOrder = 4
-                  Width = 249
+                  Width = 260
                 end
               end
               object cxTabSheet6: TcxTabSheet
@@ -6196,6 +6213,7 @@
                 object cxDBTextEdit9: TcxDBTextEdit
                   Left = 23
                   Top = 37
+                  DataBinding.DataField = 'PassportSeries'
                   DataBinding.DataSource = DModule.dsMDTalonEmployee
                   ParentFont = False
                   Style.Font.Charset = DEFAULT_CHARSET
@@ -6210,6 +6228,7 @@
                 object cxDBTextEdit11: TcxDBTextEdit
                   Left = 134
                   Top = 37
+                  DataBinding.DataField = 'PassportNumber'
                   DataBinding.DataSource = DModule.dsMDTalonEmployee
                   ParentFont = False
                   Style.Font.Charset = DEFAULT_CHARSET
@@ -6224,6 +6243,7 @@
                 object cxDBMemo1: TcxDBMemo
                   Left = 23
                   Top = 153
+                  DataBinding.DataField = 'PassportOrgan'
                   DataBinding.DataSource = DModule.dsMDTalonEmployee
                   ParentFont = False
                   Style.Font.Charset = DEFAULT_CHARSET
@@ -6239,6 +6259,7 @@
                 object cxDBDateEdit1: TcxDBDateEdit
                   Left = 23
                   Top = 93
+                  DataBinding.DataField = 'PassportDate'
                   DataBinding.DataSource = DModule.dsMDTalonEmployee
                   ParentFont = False
                   Style.Font.Charset = DEFAULT_CHARSET
@@ -6253,6 +6274,7 @@
                 object cxDBTextEdit12: TcxDBTextEdit
                   Left = 194
                   Top = 93
+                  DataBinding.DataField = 'PassportCode'
                   DataBinding.DataSource = DModule.dsMDTalonEmployee
                   ParentFont = False
                   Style.Font.Charset = DEFAULT_CHARSET
@@ -6270,7 +6292,7 @@
                 ImageIndex = 2
                 object Label47: TLabel
                   Left = 16
-                  Top = 88
+                  Top = 24
                   Width = 122
                   Height = 19
                   Caption = #1052#1077#1089#1090#1086' '#1088#1086#1078#1076#1077#1085#1080#1103
@@ -6281,13 +6303,21 @@
                   Font.Style = []
                   ParentFont = False
                 end
-                object cxDBTextEdit6: TcxDBTextEdit
+                object cxDBMemo3: TcxDBMemo
                   Left = 19
-                  Top = 113
+                  Top = 49
                   DataBinding.DataField = 'AddressBirth'
                   DataBinding.DataSource = DModule.dsMDTalonEmployee
+                  ParentFont = False
+                  Style.Font.Charset = DEFAULT_CHARSET
+                  Style.Font.Color = clWindowText
+                  Style.Font.Height = -16
+                  Style.Font.Name = 'Tahoma'
+                  Style.Font.Style = []
+                  Style.IsFontAssigned = True
                   TabOrder = 0
-                  Width = 178
+                  Height = 248
+                  Width = 246
                 end
               end
             end
@@ -6696,7 +6726,7 @@
                 ImageIndex = 3
               end
             end
-            object cxLookupComboBox5: TcxLookupComboBox
+            object LCBOrganization: TcxLookupComboBox
               Left = 519
               Top = 88
               ParentFont = False
@@ -6736,23 +6766,28 @@
                 382C313820322C31382031362C342033302C31382032342C31382032342C3238
                 2031382C32382031382C31382031342C31382031342C32382009222F3E0D0A3C
                 2F673E0D0A3C2F7376673E0D0A}
-              Properties.KeyFieldNames = 'Organization'
+              Properties.DropDownSizeable = True
+              Properties.KeyFieldNames = 'idOrganization'
               Properties.ListColumns = <
                 item
-                  FieldName = 'Organization'
+                  FieldName = 'shortName'
                 end>
+              Properties.ListOptions.ColumnSorting = False
+              Properties.ListOptions.FocusRowOnMouseMove = False
+              Properties.ListOptions.GridLines = glHorizontal
               Properties.ListOptions.ShowHeader = False
-              Properties.ListSource = DModule.dsTalonEmployee
+              Properties.ListSource = DModule.dsOrganization
+              Style.Color = clInfoBk
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -16
+              Style.Font.Height = -15
               Style.Font.Name = 'Tahoma'
-              Style.Font.Style = []
+              Style.Font.Style = [fsBold]
               Style.IsFontAssigned = True
               TabOrder = 1
               Width = 522
             end
-            object cxLookupComboBox11: TcxLookupComboBox
+            object LCBProffesion: TcxLookupComboBox
               Left = 519
               Top = 142
               ParentFont = False
@@ -6796,16 +6831,17 @@
                 end>
               Properties.ListOptions.ShowHeader = False
               Properties.ListSource = DModule.dsProffesions
+              Style.Color = clInfoBk
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -16
+              Style.Font.Height = -15
               Style.Font.Name = 'Tahoma'
-              Style.Font.Style = []
+              Style.Font.Style = [fsBold]
               Style.IsFontAssigned = True
               TabOrder = 2
               Width = 522
             end
-            object cxLookupComboBox12: TcxLookupComboBox
+            object LCBDepartment: TcxLookupComboBox
               Left = 519
               Top = 194
               ParentFont = False
@@ -6847,16 +6883,17 @@
                 end>
               Properties.ListOptions.ShowHeader = False
               Properties.ListSource = DModule.dsDepartments
+              Style.Color = clInfoBk
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -16
+              Style.Font.Height = -15
               Style.Font.Name = 'Tahoma'
-              Style.Font.Style = []
+              Style.Font.Style = [fsBold]
               Style.IsFontAssigned = True
               TabOrder = 3
               Width = 522
             end
-            object cxLookupComboBox13: TcxLookupComboBox
+            object LCBSubDeparment: TcxLookupComboBox
               Left = 519
               Top = 246
               ParentFont = False
@@ -6899,11 +6936,12 @@
                 3E0D0A}
               Properties.ListColumns = <>
               Properties.ListOptions.ShowHeader = False
+              Style.Color = clInfoBk
               Style.Font.Charset = DEFAULT_CHARSET
               Style.Font.Color = clWindowText
-              Style.Font.Height = -16
+              Style.Font.Height = -15
               Style.Font.Name = 'Tahoma'
-              Style.Font.Style = []
+              Style.Font.Style = [fsBold]
               Style.IsFontAssigned = True
               TabOrder = 4
               Width = 522
@@ -6936,11 +6974,11 @@
               StorePaintBuffer = False
               WordWrap = False
               DataField = 'img'
-              DataSource = DModule.dsTalonEmployee
+              DataSource = DModule.dsMDTalonEmployee
               Proportional = True
               Stretch = True
             end
-            object cxLookupComboBox10: TcxLookupComboBox
+            object LCBTypeOsmotr: TcxLookupComboBox
               Left = 611
               Top = 27
               ParentFont = False
@@ -6983,10 +7021,6 @@
               Properties.ListColumns = <
                 item
                   FieldName = 'nameOsmotr'
-                end
-                item
-                  Fixed = True
-                  FieldName = 'image'
                 end>
               Properties.ListOptions.ShowHeader = False
               Properties.ListSource = DModule.dsTypeOsmotr
@@ -7002,7 +7036,7 @@
             object cxDBTextEdit10: TcxDBTextEdit
               Left = 911
               Top = 27
-              DataBinding.DataField = 'Polis'
+              DataBinding.DataField = 'numPolis'
               DataBinding.DataSource = DModule.dsMDTalonEmployee
               ParentFont = False
               Style.Font.Charset = DEFAULT_CHARSET
@@ -7057,14 +7091,55 @@
                 Width = 513
                 Height = 231
                 Align = alBottom
+                Font.Charset = DEFAULT_CHARSET
+                Font.Color = clWindowText
+                Font.Height = -17
+                Font.Name = 'Tahoma'
+                Font.Style = []
+                ParentFont = False
                 TabOrder = 0
                 object cxGrid7DBTableView1: TcxGridDBTableView
                   Navigator.Buttons.CustomButtons = <>
                   ScrollbarAnnotations.CustomAnnotations = <>
+                  DataController.DataSource = DModule.dsTalonEmployee
                   DataController.Summary.DefaultGroupSummaryItems = <>
                   DataController.Summary.FooterSummaryItems = <>
                   DataController.Summary.SummaryGroups = <>
+                  OptionsData.CancelOnExit = False
+                  OptionsData.Deleting = False
+                  OptionsData.DeletingConfirmation = False
+                  OptionsData.Inserting = False
+                  OptionsView.CellAutoHeight = True
+                  OptionsView.ColumnAutoWidth = True
                   OptionsView.GroupByBox = False
+                  OptionsView.HeaderAutoHeight = True
+                  object cxGrid7DBTableView1dateTalon: TcxGridDBColumn
+                    Caption = #1044#1072#1090#1072
+                    DataBinding.FieldName = 'dateTalon'
+                    HeaderAlignmentHorz = taCenter
+                    Width = 90
+                  end
+                  object cxGrid7DBTableView1img: TcxGridDBColumn
+                    DataBinding.FieldName = 'img'
+                    PropertiesClassName = 'TcxImageProperties'
+                    Properties.FitMode = ifmNormal
+                    Properties.GraphicClassName = 'TdxPNGImage'
+                    Options.AutoWidthSizable = False
+                    Width = 45
+                    IsCaptionAssigned = True
+                  end
+                  object cxGrid7DBTableView1typeOsmotr: TcxGridDBColumn
+                    Caption = #1058#1080#1087' '#1086#1089#1084#1086#1090#1088#1072
+                    DataBinding.FieldName = 'typeOsmotr'
+                    HeaderAlignmentHorz = taCenter
+                    Width = 197
+                  end
+                  object cxGrid7DBTableView1nameList: TcxGridDBColumn
+                    Caption = #1059#1095#1072#1089#1090#1080#1077' '#1074' '#1089#1087#1080#1089#1082#1072#1093
+                    DataBinding.FieldName = 'nameList'
+                    HeaderAlignmentHorz = taCenter
+                    Width = 179
+                  end
                 end
                 object cxGrid7Level1: TcxGridLevel
                   GridView = cxGrid7DBTableView1
@@ -7073,12 +7148,12 @@
               object cxDBDateEdit3: TcxDBDateEdit
                 Left = 392
                 Top = 6
-                DataBinding.DataField = 'dateBirth'
+                DataBinding.DataField = 'dateTalon'
                 DataBinding.DataSource = DModule.dsMDTalonEmployee
                 ParentFont = False
                 Style.Font.Charset = DEFAULT_CHARSET
                 Style.Font.Color = clWindowText
-                Style.Font.Height = -20
+                Style.Font.Height = -17
                 Style.Font.Name = 'Tahoma'
                 Style.Font.Style = []
                 Style.IsFontAssigned = True
@@ -7090,6 +7165,19 @@
         end
       end
     end
+  end
+  object DBGrid1: TDBGrid
+    Left = 20
+    Top = 616
+    Width = 1321
+    Height = 141
+    DataSource = DModule.dsMDTalonEmployee
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
   end
   object scStyledForm1: TscStyledForm
     FluentUIBackground = scfuibNone

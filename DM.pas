@@ -166,6 +166,14 @@ type
     MDTalonEmployeeidCitizenship: TIntegerField;
     MDTalonEmployeetelefon: TStringField;
     MDTalonEmployeesnils: TStringField;
+    MDTalonEmployeedateTalon: TDateField;
+    MDTalonEmployeeimg: TGraphicField;
+    dsCitizenship: TDataSource;
+    qryCitizenship: TADOQuery;
+    MDTalonEmployeenameList: TStringField;
+    MDTalonEmployeetypeOsmotr: TStringField;
+    procedure qryTalonEmployeeAfterScroll(DataSet: TDataSet);
+    procedure MDTalonEmployeeAfterScroll(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -185,6 +193,8 @@ var
 implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses MainForm;
 {$R *.dfm}
 
 procedure TdxMemDataHelper.FilterDataSet(aFilterFunc: TdxMemDataFilterRecord);
@@ -205,6 +215,17 @@ begin
   finally
     EnableControls;
   end;
+end;
+
+procedure TDModule.MDTalonEmployeeAfterScroll(DataSet: TDataSet);
+begin
+ Form1.UpdateInfoLCBEmployee;
+end;
+
+procedure TDModule.qryTalonEmployeeAfterScroll(DataSet: TDataSet);
+var s:integer;
+begin
+    s:=1;
 end;
 
 end.
