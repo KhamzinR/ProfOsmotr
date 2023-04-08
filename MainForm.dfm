@@ -7108,6 +7108,7 @@
                   OptionsData.CancelOnExit = False
                   OptionsData.Deleting = False
                   OptionsData.DeletingConfirmation = False
+                  OptionsData.Editing = False
                   OptionsData.Inserting = False
                   OptionsView.CellAutoHeight = True
                   OptionsView.ColumnAutoWidth = True
